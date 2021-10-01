@@ -1,15 +1,14 @@
 from tkinter import *
 import tkinter as tk
-from spacingmodel import *
 from PIL import ImageTk, Image
 
 
-class app():
+class App():
 
 	def __init__(self, name, width, height):
 		# Top level window
 		frame = tk.Tk()
-		frame.title("TextBox Input")
+		frame.title(name)
 		frame.geometry(f'{width}x{height}')
 
 		# Function for getting Input
@@ -44,9 +43,7 @@ class app():
 		self.cue_label.config(text=fact_text)
 
 	def display_image(self, img_file: str) -> None:
-		print(img_file)
 		image = Image.open(img_file)
-		print(image)
 		image = image.resize((350, 280), Image.ANTIALIAS)
 		image_tk = ImageTk.PhotoImage(image)
 
@@ -62,6 +59,3 @@ class app():
 		input_text = self.input_textbox.get(1.0, "end-1c")
 
 		return input_text
-
-
-test = app("Name", 700, 550)
