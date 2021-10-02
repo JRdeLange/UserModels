@@ -1,10 +1,17 @@
 from tkinter import *
+from spacingmodel import *
 import tkinter as tk
 from PIL import ImageTk, Image
 
 
 class App:
-    def __init__(self, name, width, height):
+    def __init__(self, name, width, height, fact_dict, tree_dict, model):
+
+        #vars
+        self.fact_dict = fact_dict
+        self.tree_dict = tree_dict
+        self.model = model
+
         # Top level window
         frame = tk.Tk()
         frame.title(name)
@@ -25,11 +32,14 @@ class App:
 
         # Cue label Creation
         self.cue_label = tk.Label(frame, text="", font=("Helvetica bold", 13))
-        self.cue_label.place(x=195, y=50)
+        self.cue_label.place(x=225, y=50)
 
         # Image label Creation
         self.image_label = tk.Label(frame, text="")
         self.image_label.place(x=180, y=130)
+
+        first_fact = self.model.get_next_fact(current_time=0)
+        self.display_cue(first_fact[0])
 
         frame.mainloop()
 
@@ -53,8 +63,8 @@ class App:
         if fact.question_type == "Genus":
             self.display_text("What genus are these species?")
         else:
-            self.display_text("What species is this?")
-            self.display_image(fact[1])
+            self.display_text("What species is shown below?")
+            self.display_image(fact[2])
 
     def read_input(self) -> str:
         input_text = self.input_textbox.get(1.0, "end-1c")
