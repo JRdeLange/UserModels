@@ -6,11 +6,12 @@ from PIL import ImageTk, Image
 
 
 class App:
-    def __init__(self, name, width, height, fact_dict, tree_dict, model):
+    def __init__(self, name, width, height, fact_dict, tree_dict, learned_dict, model):
 
-        #vars
+        # vars
         self.fact_dict = fact_dict
         self.tree_dict = tree_dict
+        self.learned_dict = learned_dict
         self.model = model
 
         # Top level window
@@ -25,7 +26,7 @@ class App:
         # TextBox Creation
         self.input_textbox = tk.Text(frame, height=1.5, width=51)
 
-        self.input_textbox.place(x=width/4, y=450)
+        self.input_textbox.place(x=width / 4, y=450)
 
         # Button Creation
         printButton = tk.Button(frame, text="Confirm", command=self.read_input)
@@ -72,8 +73,6 @@ class App:
         self.image_label.place(x=175, y=110)
 
     def display_cue(self, fact) -> None:
-        print(fact)
-        print(fact.question_type)
         if fact.question_type == "Phylum":
             self.display_question("What phylum are these families?")
             self.image_label.place_forget()
@@ -110,6 +109,23 @@ class App:
         correct = True if output == self.current_fact.answer else False
         response = Response(self.current_fact, start_time=self.time, rt=2207, correct=correct)  # TODO: timing thing
         self.model.register_response(response)
+        self.update_learned(correct)
         self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.time)
         self.time += 3800  # TODO: timing thing
 
+    def update_learned(self, correct):
+        if not self.current_new and correct:  # increase the number of correct responses
+            self.learned_dict[self.current_fact] += 1
+        
+        for category in self.tree_dict:  # go through the parents
+            print(self.tree_dict[category])
+            add = True
+            for item in self.tree_dict[category]:  # go through the children of each parent
+                print(item)
+                print("item in fact dict: ", self.fact_dict[item])
+                print("item in learned dict: ", self.learned_dict[self.fact_dict[item]])
+                if self.learned_dict[self.fact_dict[item]] < 3:  # TODO: decide on a threshold for learned
+                    add = False
+            print("category in fact dict: ", self.fact_dict[category])
+            if add and self.fact_dict[category] not in self.model.facts:  # make sure it isn't already added
+                self.model.add_fact(self.fact_dict[category])

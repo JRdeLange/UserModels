@@ -6,6 +6,7 @@ import random
 def load_datasets(file, m, hierarchy):
     f = open(file)
     dict1 = {}
+    dict2 = {}
     for line in f:
         split_line = line.strip().split(";")
         if file == "fact.txt":
@@ -15,18 +16,20 @@ def load_datasets(file, m, hierarchy):
             elif not hierarchy:
                 m.add_fact(fact)
             dict1[fact] = 0
+            dict2[split_line[0]] = fact
         else:
             if len(split_line) == 2:
                 dict1[split_line[0]] = split_line[1].rstrip().split(",")
-    return dict1
+    return dict1, dict2
 
 
 def main():
     m = SpacingModel()
     hierarchy = random.choice([True, False])
-    fact_dict = load_datasets("fact.txt", m, hierarchy)
-    tree_dict = load_datasets("tree.txt", m, hierarchy)
-    app = App("Name", 700, 550, fact_dict, tree_dict, m)
+    learned_dict, fact_dict = load_datasets("fact.txt", m, hierarchy)
+    tree_dict, throw_away = load_datasets("tree.txt", m, hierarchy)
+
+    app = App("Name", 700, 550, fact_dict, tree_dict, learned_dict, m)
 
 
 if __name__ == "__main__":
