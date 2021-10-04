@@ -35,13 +35,15 @@ class App:
         self.cue_label = tk.Label(frame, text="", font=("Helvetica bold", 16))
         self.cue_label.place(x=225, y=50)
 
+        # Q example label Creation
+        self.q_examples_label = tk.Label(frame, text="", font=("Helvetica bold", 13))
+
         # Answer label Creation
         self.answer_label = tk.Label(frame, text="", font=("Helvetica bold", 13))
         self.answer_label.place(x=230, y=420)
 
         # Image label Creation
         self.image_label = tk.Label(frame, text="")
-        self.image_label.place(x=175, y=110)
 
         self.time = 0  # TODO: make a proper timing thing
         self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.time)
@@ -49,8 +51,13 @@ class App:
 
         frame.mainloop()
 
-    def display_text(self, fact_text: str) -> None:
+    def display_question(self, fact_text: str) -> None:
         self.cue_label.config(text=fact_text)
+
+    def display_q_examples(self, examples: str) -> None:
+        text = examples.replace(",", "\n")
+        self.q_examples_label.config(text=text)
+        self.q_examples_label.place(x=225, y=80)
 
     def display_answer(self, answer_text: str) -> None:
         self.answer_label.config(text=answer_text)
@@ -62,16 +69,26 @@ class App:
 
         self.image_label.image = image_tk
         self.image_label.config(image=image_tk)
+        self.image_label.place(x=175, y=110)
 
     def display_cue(self, fact) -> None:
+        print(fact)
+        print(fact.question_type)
         if fact.question_type == "Phylum":
-            self.display_text("What phylum are these families?")
-        if fact.question_type == "Family":
-            self.display_text("What family are these genuses?")
-        if fact.question_type == "Genus":
-            self.display_text("What genus are these species?")
+            self.display_question("What phylum are these families?")
+            self.image_label.place_forget()
+            self.display_q_examples(fact.question)
+        elif fact.question_type == "Family":
+            self.display_question("What family are these genuses?")
+            self.image_label.place_forget()
+            self.display_q_examples(fact.question)
+        elif fact.question_type == "Genus":
+            self.display_question("What genus are these species?")
+            self.image_label.place_forget()
+            self.display_q_examples(fact.question)
         else:
-            self.display_text("What species is shown below?")
+            self.display_question("What species is shown below?")
+            self.q_examples_label.place_forget()
             self.display_image(fact[2])
         # If it is the first time the fact has been encountered, then the answer is also shown
         if self.current_new:
