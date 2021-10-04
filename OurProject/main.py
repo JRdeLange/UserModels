@@ -2,11 +2,11 @@ from spacingmodel import *
 from app import App
 
 
-def load_datasets(file, m):
+def load_datasets(file, m):  # TODO: make it so that random completely can also happen
     f = open(file)
     dict1 = {}
     for line in f:
-        split_line = line.split(";")
+        split_line = line.strip().split(";")
         if file == "fact.txt":
             fact = Fact(split_line[0], split_line[1], split_line[2], split_line[3])
             if fact.question_type == "Species":

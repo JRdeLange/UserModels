@@ -1,5 +1,6 @@
 from __future__ import division
 import math
+import random
 import pandas as pd
 from collections import namedtuple
 
@@ -46,7 +47,8 @@ class SpacingModel(object):
             (r for r in self.responses if r.start_time == response.start_time), None
         ):
             raise RuntimeError(
-                "Error while registering response: A response has already been logged at this start_time: {}. Each response must occur at a unique start_time.".format(
+                "Error while registering response: A response has already been logged at this start_time: {}. Each "
+                "response must occur at a unique start_time.".format(
                     response.start_time
                 )
             )
@@ -56,8 +58,9 @@ class SpacingModel(object):
     def get_next_fact(self, current_time):
         # type: (int) -> (Fact, bool)
         """
-        Returns a tuple containing the fact that needs to be repeated most urgently and a boolean indicating whether this fact is new (True) or has been presented before (False).
-        If none of the previously studied facts needs to be repeated right now, return a new fact instead.
+        Returns a tuple containing the fact that needs to be repeated most urgently and a boolean indicating whether
+        this fact is new (True) or has been presented before (False). If none of the previously studied facts needs
+        to be repeated right now, return a new fact instead.
         """
         # Calculate all fact activations in the near future
         fact_activations = [
@@ -83,10 +86,11 @@ class SpacingModel(object):
         ]
         if len(not_seen_facts) == 0 or len(seen_facts_below_threshold) > 0:
             weakest_fact = min(seen_facts, key=lambda t: t[1])
-            return (weakest_fact[0], False)
+            return weakest_fact[0], False
 
         # If none of the previously seen facts has an activation below the threshold, return a new fact
-        return (not_seen_facts[0][0], True)
+
+        return random.choice(not_seen_facts)[0], True
 
     def get_rate_of_forgetting(self, time, fact):
         # type: (int, Fact) -> float
@@ -94,7 +98,6 @@ class SpacingModel(object):
         Return the estimated rate of forgetting of the fact at the specified time
         """
         encounters = []
-
         responses_for_fact = [
             r
             for r in self.responses
@@ -134,7 +137,6 @@ class SpacingModel(object):
         """
 
         encounters = []
-
         responses_for_fact = [
             r
             for r in self.responses

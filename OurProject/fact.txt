@@ -24,6 +24,6 @@
 24;Species;../species/24.png;Yellow spotted scorpionfish
 25;Species;../species/25.png;Barchin scorpionfish
 26;Species;../species/26.png;Bicolored foxface
-27;Species;../species/27.png;scribbled rabbitfish
-28;Species;../species/28.png;goldspotted spinefoot
+27;Species;../species/27.png;Scribbled rabbitfish
+28;Species;../species/28.png;Goldspotted spinefoot
 29;Species;../species/29.png;Magnificent rabbitfish
