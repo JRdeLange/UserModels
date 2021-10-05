@@ -1,6 +1,6 @@
 from spacingmodel import *
 from app import App
-import random
+import sys
 
 
 def load_datasets(file, m, hierarchy):
@@ -23,9 +23,9 @@ def load_datasets(file, m, hierarchy):
     return dict1, dict2
 
 
-def main():
+def main(argv):
     m = SpacingModel()
-    hierarchy = random.choice([True, False])
+    hierarchy = [False, True][int(argv[1])]
     learned_dict, fact_dict = load_datasets("fact.txt", m, hierarchy)
     tree_dict, throw_away = load_datasets("tree.txt", m, hierarchy)
 
@@ -33,4 +33,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv)

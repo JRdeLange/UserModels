@@ -13,6 +13,8 @@ class App:
         self.tree_dict = tree_dict
         self.learned_dict = learned_dict
         self.model = model
+        self.width = width
+        self.height = height
 
         # Top level window
         frame = tk.Tk()
@@ -29,8 +31,8 @@ class App:
         self.input_textbox.place(x=width / 4, y=450)
 
         # Button Creation
-        printButton = tk.Button(frame, text="Confirm", command=self.read_input)
-        printButton.place(x=330, y=500)
+        self.Button = tk.Button(frame, text="Confirm", command=self.press_button)
+        self.Button.place(x=330, y=500)
 
         # Cue label Creation
         self.cue_label = tk.Label(frame, text="", font=("Helvetica bold", 16))
@@ -97,21 +99,28 @@ class App:
             text = ""
             self.display_answer(text)
 
-    def read_input(self) -> str:
-        input_text = self.input_textbox.get(1.0, "end-1c")
-        self.process_response(input_text)
-        self.display_cue(self.current_fact)
-        self.input_textbox.delete("1.0", "end")
-        return input_text
+    def press_button(self) -> str:
+        if self.Button['text'] == "Confirm":
+            input_text = self.input_textbox.get(1.0, "end-1c")
+            self.process_response(input_text)
+            self.input_textbox.delete("1.0", "end")
+            self.input_textbox.place_forget()
+            return input_text
+        elif self.Button['text'] == "Next":
+            self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.time)
+            self.display_cue(self.current_fact)
+            self.input_textbox.place(x=self.width / 4, y=450)
+            self.time += 3800  # TODO: timing thing
+            self.Button['text'] = "Confirm"
 
     def process_response(self, output):
-        # TODO: make it so capitals and dashes wont make things be incorrect
-        correct = True if output == self.current_fact.answer else False
+        answer = self.simplify_str(inp=self.current_fact.answer)
+        output = self.simplify_str(output)
+        correct = output == answer
         response = Response(self.current_fact, start_time=self.time, rt=2207, correct=correct)  # TODO: timing thing
         self.model.register_response(response)
         self.update_learned(correct)
-        self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.time)
-        self.time += 3800  # TODO: timing thing
+        self.Button['text'] = "Next"
 
     def update_learned(self, correct):
         if not self.current_new and correct:  # increase the number of correct responses
@@ -124,8 +133,20 @@ class App:
                 print(item)
                 print("item in fact dict: ", self.fact_dict[item])
                 print("item in learned dict: ", self.learned_dict[self.fact_dict[item]])
-                if self.learned_dict[self.fact_dict[item]] < 3:  # TODO: decide on a threshold for learned
+                if self.learned_dict[self.fact_dict[item]] < 2:  # TODO: decide on a threshold for learned
                     add = False
             print("category in fact dict: ", self.fact_dict[category])
             if add and self.fact_dict[category] not in self.model.facts:  # make sure it isn't already added
                 self.model.add_fact(self.fact_dict[category])
+
+        if correct:
+            self.display_answer("That's correct!")
+        else:
+            text = "Wrong, the answer is: " + self.current_fact.answer
+            self.display_answer(text)
+
+    @staticmethod
+    def simplify_str(inp: str) -> str:
+        trans_table = inp.maketrans("-", " ")
+        inp = inp.translate(trans_table).lower()
+        return inp
