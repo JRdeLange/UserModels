@@ -3,6 +3,7 @@ from spacingmodel import *
 
 import tkinter as tk
 from PIL import ImageTk, Image
+import time
 
 
 class App:
@@ -48,8 +49,13 @@ class App:
         # Image label Creation
         self.image_label = tk.Label(frame, text="")
 
-        self.time = 0  # TODO: make a proper timing thing
-        self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.time)
+        # time stuff
+        self.app_start_time = time.time()
+        self.fact_start_time = 0
+        self.response_time = 0
+
+        # display first fact
+        self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.fact_start_time)
         self.display_cue(self.current_fact)
 
         frame.mainloop()
@@ -99,23 +105,24 @@ class App:
             text = ""
             self.display_answer(text)
 
-    def press_button(self) -> str:
-        if self.Button['text'] == "Confirm":
-            input_text = self.input_textbox.get(1.0, "end-1c")
+    def press_button(self) -> None:
+        if self.Button['text'] == "Confirm":  # response given
+            self.response_time = time.time() - self.fact_start_time - self.app_start_time  # record response time
+            input_text = self.input_textbox.get(1.0, "end-1c")  # retrieve given response
             self.process_response(input_text)
             self.input_textbox.delete("1.0", "end")
             self.input_textbox.place_forget()
-            return input_text
-        elif self.Button['text'] == "Next":
-            self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.time)
-            self.display_cue(self.current_fact)
-            self.input_textbox.place(x=self.width / 4, y=450)
-            self.time += 3800  # TODO: timing thing
+
+        elif self.Button['text'] == "Next":  # start of next fact shown
+            self.fact_start_time = time.time() - self.app_start_time  # get current time for when the fact is shown
+            self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.fact_start_time)  # get new fact
+            self.display_cue(self.current_fact)  # display new fact
+            self.input_textbox.place(x=self.width / 4, y=450)  # place textbox
             self.Button['text'] = "Confirm"
 
     def process_response(self, output):
         correct = self.simplify_str(output) == self.simplify_str(inp=self.current_fact.answer)
-        response = Response(self.current_fact, start_time=self.time, rt=2207, correct=correct)  # TODO: timing thing
+        response = Response(self.current_fact, start_time=self.fact_start_time, rt=self.response_time, correct=correct)
         self.model.register_response(response)
         self.update_learned(correct)
         self.Button['text'] = "Next"

@@ -43,7 +43,7 @@ class SpacingModel(object):
         """
         # Prevent duplicate responses
         if next(
-            (r for r in self.responses if r.start_time == response.start_time), None
+            (r for r in self.responses if r.app_start_time == response.start_time), None
         ):
             raise RuntimeError(
                 "Error while registering response: A response has already been logged at this start_time: {}. Each response must occur at a unique start_time.".format(
@@ -98,19 +98,19 @@ class SpacingModel(object):
         responses_for_fact = [
             r
             for r in self.responses
-            if r.fact.fact_id == fact.fact_id and r.start_time < time
+            if r.fact.fact_id == fact.fact_id and r.app_start_time < time
         ]
         alpha = self.DEFAULT_ALPHA
 
         # Calculate the activation by running through the sequence of previous responses
         for response in responses_for_fact:
             activation = self.calculate_activation_from_encounters(
-                encounters, response.start_time
+                encounters, response.app_start_time
             )
             encounters.append(
                 Encounter(
                     activation,
-                    response.start_time,
+                    response.app_start_time,
                     self.normalise_reaction_time(response),
                     self.DEFAULT_ALPHA,
                 )
@@ -138,19 +138,19 @@ class SpacingModel(object):
         responses_for_fact = [
             r
             for r in self.responses
-            if r.fact.fact_id == fact.fact_id and r.start_time < time
+            if r.fact.fact_id == fact.fact_id and r.app_start_time < time
         ]
         alpha = self.DEFAULT_ALPHA
 
         # Calculate the activation by running through the sequence of previous responses
         for response in responses_for_fact:
             activation = self.calculate_activation_from_encounters(
-                encounters, response.start_time
+                encounters, response.app_start_time
             )
             encounters.append(
                 Encounter(
                     activation,
-                    response.start_time,
+                    response.app_start_time,
                     self.normalise_reaction_time(response),
                     self.DEFAULT_ALPHA,
                 )
