@@ -114,9 +114,7 @@ class App:
             self.Button['text'] = "Confirm"
 
     def process_response(self, output):
-        answer = self.simplify_str(inp=self.current_fact.answer)
-        output = self.simplify_str(output)
-        correct = output == answer
+        correct = self.simplify_str(output) == self.simplify_str(inp=self.current_fact.answer)
         response = Response(self.current_fact, start_time=self.time, rt=2207, correct=correct)  # TODO: timing thing
         self.model.register_response(response)
         self.update_learned(correct)
@@ -125,18 +123,16 @@ class App:
     def update_learned(self, correct):
         if not self.current_new and correct:  # increase the number of correct responses
             self.learned_dict[self.current_fact] += 1
-        
+
+        if not correct:  # reset the counter for responses
+            self.learned_dict[self.current_fact] = 0
+
         for category in self.tree_dict:  # go through the parents
-            print(self.tree_dict[category])
             add = True
             for item in self.tree_dict[category]:  # go through the children of each parent
-                print(item)
-                print("item in fact dict: ", self.fact_dict[item])
-                print("item in learned dict: ", self.learned_dict[self.fact_dict[item]])
                 if self.learned_dict[self.fact_dict[item]] < 2:  # TODO: decide on a threshold for learned
                     add = False
-            print("category in fact dict: ", self.fact_dict[category])
-            if add and self.fact_dict[category] not in self.model.facts:  # make sure it isn't already added
+            if add and self.fact_dict[category] not in self.model.facts:  # make sure the fact hasn't already been added
                 self.model.add_fact(self.fact_dict[category])
 
         if correct:
