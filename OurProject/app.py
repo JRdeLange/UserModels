@@ -50,10 +50,10 @@ class App:
         self.image_label = tk.Label(frame, text="")
 
         # time stuff
-        self.app_start_time = time.time()
+        self.app_start_time = time.time() * 1000
         self.fact_start_time = 0
         self.response_time = 0
-
+        print("fact start time: ", self.fact_start_time)
         # display first fact
         self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.fact_start_time)
         self.display_cue(self.current_fact)
@@ -107,14 +107,16 @@ class App:
 
     def press_button(self) -> None:
         if self.Button['text'] == "Confirm":  # response given
-            self.response_time = time.time() - self.fact_start_time - self.app_start_time  # record response time
+            self.response_time = (time.time() * 1000) - self.fact_start_time - self.app_start_time  # record response time
+            print("response time: ", self.response_time)
             input_text = self.input_textbox.get(1.0, "end-1c")  # retrieve given response
             self.process_response(input_text)
             self.input_textbox.delete("1.0", "end")
             self.input_textbox.place_forget()
 
         elif self.Button['text'] == "Next":  # start of next fact shown
-            self.fact_start_time = time.time() - self.app_start_time  # get current time for when the fact is shown
+            self.fact_start_time = (time.time() * 1000) - self.app_start_time  # get current time for when the fact is shown
+            print("fact start time: ", self.fact_start_time)
             self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.fact_start_time)  # get new fact
             self.display_cue(self.current_fact)  # display new fact
             self.input_textbox.place(x=self.width / 4, y=450)  # place textbox
