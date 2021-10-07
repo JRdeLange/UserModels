@@ -21,39 +21,55 @@ class App:
         frame = tk.Tk()
         frame.title(name)
         frame.geometry(f"{width}x{height}")
+        frame.config(background='#defcff')
 
+        frame.grid_rowconfigure(0, weight=0)  # question
+        frame.grid_rowconfigure(1, weight=0)  # picture
+        frame.grid_rowconfigure(2, weight=0)  # picture
+        frame.grid_rowconfigure(3, weight=0)  # picture
+        frame.grid_rowconfigure(4, weight=0)  # picture
+        frame.grid_rowconfigure(5, weight=0)  # picture
+        frame.grid_rowconfigure(6, weight=0)  # answer
+        frame.grid_rowconfigure(7, weight=0)  # textbox
+        frame.grid_rowconfigure(8, weight=0)  # textbox
+        frame.grid_rowconfigure(9, weight=0)  # button
+
+        frame.grid_columnconfigure(0, weight=1)
         # Function for getting Input
         # from textbox and printing it
         # at label widget
 
         # TextBox Creation
-        self.input_textbox = tk.Text(frame, height=1.5, width=51)
-
-        self.input_textbox.place(x=width / 4, y=450)
+        self.input_textbox = tk.Text(frame, height=3, width=51)
+        self.input_textbox.grid(row=7, column=0, rowspan=2, pady=5)
+        # self.input_textbox.place(x=width / 4, y=450)
 
         # Button Creation
-        self.Button = tk.Button(frame, text="Confirm", command=self.press_button)
-        self.Button.place(x=330, y=500)
+        self.Button = tk.Button(frame, text="Confirm", font=("Helvetica bold", 12), command=self.press_button, padx=8, pady=4, state=ACTIVE)
+        self.Button.grid(row=9, column=0, pady=10)
+        # self.Button.place(x=330, y=500)
 
         # Cue label Creation
-        self.cue_label = tk.Label(frame, text="", font=("Helvetica bold", 16))
-        self.cue_label.place(x=225, y=50)
+        self.cue_label = tk.Label(frame, text="", font=("Helvetica bold", 20), background='#defcff')
+        self.cue_label.grid(row=0, column=0, pady=20)
+        # self.cue_label.place(x=225, y=50)
 
         # Q example label Creation
-        self.q_examples_label = tk.Label(frame, text="", font=("Helvetica bold", 13))
+        self.q_examples_label = tk.Label(frame, text="", font=("Helvetica bold", 18), background='#defcff')
 
         # Answer label Creation
-        self.answer_label = tk.Label(frame, text="", font=("Helvetica bold", 13))
-        self.answer_label.place(x=230, y=420)
+        self.answer_label = tk.Label(frame, text="", font=("Helvetica bold", 15), background='#defcff')
+        self.answer_label.grid(row=6, column=0, pady=5)
+        # self.answer_label.place(x=230, y=420)
 
         # Image label Creation
-        self.image_label = tk.Label(frame, text="")
+        self.image_label = tk.Label(frame, text="", background='#defcff')
 
         # time stuff
         self.app_start_time = time.time() * 1000
         self.fact_start_time = 0
         self.response_time = 0
-        print("fact start time: ", self.fact_start_time)
+        # print("fact start time: ", self.fact_start_time)
         # display first fact
         self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.fact_start_time)
         self.display_cue(self.current_fact)
@@ -66,10 +82,12 @@ class App:
     def display_q_examples(self, examples: str) -> None:
         text = examples.replace(",", "\n")
         self.q_examples_label.config(text=text)
-        self.q_examples_label.place(x=225, y=80)
+        self.q_examples_label.grid(row=1, column=0, rowspan=5, pady=20)
+        # self.q_examples_label.place(x=225, y=80)
 
     def display_answer(self, answer_text: str) -> None:
         self.answer_label.config(text=answer_text)
+        self.answer_label.grid(row=6, column=0, pady=5)
 
     def display_image(self, img_file: str) -> None:
         image = Image.open(img_file)
@@ -78,48 +96,49 @@ class App:
 
         self.image_label.image = image_tk
         self.image_label.config(image=image_tk)
-        self.image_label.place(x=175, y=110)
+        self.image_label.grid(row=1, column=0, rowspan=5, pady=20)
+        # self.image_label.place(x=175, y=110)
 
     def display_cue(self, fact) -> None:
         if fact.question_type == "Phylum":
             self.display_question("What phylum are these families?")
-            self.image_label.place_forget()
+            self.image_label.grid_forget()
             self.display_q_examples(fact.question)
         elif fact.question_type == "Family":
             self.display_question("What family are these genuses?")
-            self.image_label.place_forget()
+            self.image_label.grid_forget()
             self.display_q_examples(fact.question)
         elif fact.question_type == "Genus":
             self.display_question("What genus are these species?")
-            self.image_label.place_forget()
+            self.image_label.grid_forget()
             self.display_q_examples(fact.question)
         else:
             self.display_question("What species is shown below?")
-            self.q_examples_label.place_forget()
+            self.q_examples_label.grid_forget()
             self.display_image(fact[2])
         # If it is the first time the fact has been encountered, then the answer is also shown
         if self.current_new:
             text = "Answer: " + fact.answer
             self.display_answer(text)
         else:
-            text = ""
-            self.display_answer(text)
+            self.answer_label.grid_forget()
 
     def press_button(self) -> None:
         if self.Button['text'] == "Confirm":  # response given
             self.response_time = (time.time() * 1000) - self.fact_start_time - self.app_start_time  # record response time
-            print("response time: ", self.response_time)
+            # print("response time: ", self.response_time)
             input_text = self.input_textbox.get(1.0, "end-1c")  # retrieve given response
             self.process_response(input_text)
             self.input_textbox.delete("1.0", "end")
-            self.input_textbox.place_forget()
+            self.input_textbox.grid_forget()
 
         elif self.Button['text'] == "Next":  # start of next fact shown
             self.fact_start_time = (time.time() * 1000) - self.app_start_time  # get current time for when the fact is shown
-            print("fact start time: ", self.fact_start_time)
+            # print("fact start time: ", self.fact_start_time)
             self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.fact_start_time)  # get new fact
             self.display_cue(self.current_fact)  # display new fact
-            self.input_textbox.place(x=self.width / 4, y=450)  # place textbox
+            # self.input_textbox.place(x=self.width / 4, y=450)  # place textbox
+            self.input_textbox.grid(row=7, column=0, rowspan=2)
             self.Button['text'] = "Confirm"
 
     def process_response(self, output):

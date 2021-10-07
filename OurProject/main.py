@@ -29,7 +29,7 @@ def main(argv):
     learned_dict, fact_dict = load_datasets("fact.txt", m, hierarchy)
     tree_dict, throw_away = load_datasets("tree.txt", m, hierarchy)
 
-    app = App("Name", 700, 550, fact_dict, tree_dict, learned_dict, m)
+    app = App("Learning Taxonomic Facts", 700, 550, fact_dict, tree_dict, learned_dict, m)
     # save the data from the experiment to a file named results_participant_(specified number).txt
     data = "results/results_participant_" + str(argv[2]) + ".txt"
     m.export_data(data)
