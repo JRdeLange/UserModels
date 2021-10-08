@@ -73,6 +73,7 @@ class App:
         # display first fact
         self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.fact_start_time)
         self.display_cue(self.current_fact)
+        self.current_response = None
 
         frame.mainloop()
 
@@ -127,8 +128,8 @@ class App:
         if self.Button['text'] == "Confirm":  # response given
             self.response_time = (time.time() * 1000) - self.fact_start_time - self.app_start_time  # record response time
             # print("response time: ", self.response_time)
-            input_text = self.input_textbox.get(1.0, "end-1c")  # retrieve given response
-            self.process_response(input_text)
+            self.current_response = self.input_textbox.get(1.0, "end-1c")  # retrieve given response
+            self.process_response(self.current_response)
             self.input_textbox.delete("1.0", "end")
             self.input_textbox.grid_forget()
 
@@ -166,7 +167,7 @@ class App:
         if correct:
             self.display_answer("That's correct!")
         else:
-            text = "Wrong, the answer is: " + self.current_fact.answer
+            text = "Wrong, the answer is: " + self.current_fact.answer + " \n and you answered: " + self.current_response
             self.display_answer(text)
 
     @staticmethod
