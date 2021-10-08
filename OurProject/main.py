@@ -1,6 +1,7 @@
 from spacingmodel import *
 from app import App
 import sys
+import os
 
 
 def load_datasets(file, m, hierarchy):
@@ -31,7 +32,13 @@ def main(argv):
 
     app = App("Learning Taxonomic Facts", 700, 550, fact_dict, tree_dict, learned_dict, m)
     # save the data from the experiment to a file named results_participant_(specified number).txt
-    data = "results/results_participant_" + str(argv[2]) + ".txt"
+    if not os.path.exists('results'):
+        os.makedirs('results')
+
+    if len(argv) == 3:
+        data = "results/results_participant_" + str(argv[2]) + ".txt"
+    else:
+        data = "results/results_participant_unknown.txt"
     m.export_data(data)
 
 
