@@ -161,7 +161,7 @@ class App:
             for item in self.tree_dict[category]:  # go through the children of each parent
                 if self.learned_dict[self.fact_dict[item]] < 2:  # TODO: decide on a threshold for learned
                     add = False
-            if add and self.fact_dict[category] not in self.model.facts:  # make sure the fact hasn't already been added
+            if add and (self.fact_dict[category] not in self.model.facts):  # make sure the fact hasn't already been added
                 self.model.add_fact(self.fact_dict[category])
 
         if correct:
@@ -173,5 +173,5 @@ class App:
     @staticmethod
     def simplify_str(inp: str) -> str:
         trans_table = inp.maketrans("-", " ")
-        inp = inp.translate(trans_table).lower()
+        inp = inp.translate(trans_table).lower().strip()
         return inp
