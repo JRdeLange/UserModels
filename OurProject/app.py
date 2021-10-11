@@ -42,6 +42,7 @@ class App:
         # TextBox Creation
         self.input_textbox = tk.Text(frame, height=3, width=51)
         self.input_textbox.grid(row=7, column=0, rowspan=2, pady=5)
+        self.input_textbox.bind("<Key>", self.record_response)
         # self.input_textbox.place(x=width / 4, y=450)
 
         # Button Creation
@@ -124,9 +125,15 @@ class App:
         else:
             self.answer_label.grid_forget()
 
+    def record_response(self, *args):
+        # record response time once the first button is typed
+        if len(self.input_textbox.get(1.0, "end-1c")) == 0:
+            self.response_time = (time.time() * 1000) - self.fact_start_time - self.app_start_time
+            # print("response time: ", self.response_time)
+        # print("we've got: ", len(self.input_textbox.get(1.0, "end-1c")))
+
     def press_button(self) -> None:
         if self.Button['text'] == "Confirm":  # response given
-            self.response_time = (time.time() * 1000) - self.fact_start_time - self.app_start_time  # record response time
             # print("response time: ", self.response_time)
             self.current_response = self.input_textbox.get(1.0, "end-1c")  # retrieve given response
             self.process_response(self.current_response)
@@ -134,13 +141,13 @@ class App:
             self.input_textbox.grid_forget()
 
         elif self.Button['text'] == "Next":  # start of next fact shown
-            self.fact_start_time = (time.time() * 1000) - self.app_start_time  # get current time for when the fact is shown
             # print("fact start time: ", self.fact_start_time)
             self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.fact_start_time)  # get new fact
             self.display_cue(self.current_fact)  # display new fact
             # self.input_textbox.place(x=self.width / 4, y=450)  # place textbox
             self.input_textbox.grid(row=7, column=0, rowspan=2)
             self.Button['text'] = "Confirm"
+            self.fact_start_time = (time.time() * 1000) - self.app_start_time  # get current time for when the fact is shown
 
     def process_response(self, output):
         correct = self.simplify_str(output) == self.simplify_str(inp=self.current_fact.answer)
@@ -163,6 +170,7 @@ class App:
                     add = False
             if add and (self.fact_dict[category] not in self.model.facts):  # make sure the fact hasn't already been added
                 self.model.add_fact(self.fact_dict[category])
+                print("added: ", self.fact_dict[category])
 
         if correct:
             self.display_answer("That's correct!")
