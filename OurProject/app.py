@@ -7,7 +7,7 @@ import time
 
 
 class App:
-    def __init__(self, name, width, height, fact_dict, tree_dict, learned_dict, model):
+    def __init__(self, name, width, height, fact_dict, tree_dict, learned_dict, model, max_edit_distance = 1):
 
         # vars
         self.fact_dict = fact_dict
@@ -16,6 +16,7 @@ class App:
         self.model = model
         self.width = width
         self.height = height
+        self.max_edit_distance = max_edit_distance
 
         # Top level window
         frame = tk.Tk()
@@ -150,7 +151,8 @@ class App:
             self.fact_start_time = (time.time() * 1000) - self.app_start_time  # get current time for when the fact is shown
 
     def process_response(self, output):
-        correct = self.simplify_str(output) == self.simplify_str(inp=self.current_fact.answer)
+        edit_distance = self.calc_levenshtein_dist(self.simplify_str(output), self.simplify_str(inp=self.current_fact.answer))
+        correct = edit_distance <= self.max_edit_distance
         response = Response(self.current_fact, start_time=self.fact_start_time, rt=self.response_time, correct=correct)
         self.model.register_response(response)
         self.update_learned(correct)
@@ -183,3 +185,20 @@ class App:
         trans_table = inp.maketrans("-", " ")
         inp = inp.translate(trans_table).lower().strip()
         return inp
+
+    @staticmethod
+    def calc_levenshtein_dist(text_a, text_b):
+        if (len(text_a) > len(text_b)):
+            text_a, text_b = text_b, text_a
+
+        distances = range(len(text_a) + 1)
+        for i2, c2 in enumerate(text_b):
+            distances_ = [i2+1]
+            for i1, c1 in enumerate(text_a):
+                if c1 == c2:
+                    distances_.append(distances[i1])
+                else:
+                    distances_.append(1 + min((distances[i1], distances[i1 + 1], distances_[-1])))
+            distances = distances_
+        return distances[-1]
+

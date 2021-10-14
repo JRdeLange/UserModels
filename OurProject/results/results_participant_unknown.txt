@@ -1,0 +1,4 @@
+trial,start_time,rt,correct,fact_id,question_type,question,answer,alpha
+1,0.0,1520.9423828125,True,29,Species,../species/29.png,Magnificent rabbitfish,0.3
+2,6928.141845703125,1040.810791015625,False,20,Species,../species/20.png,Taveta weaver,0.3
+3,13577.1669921875,1335.74267578125,False,15,Species,../species/15.png,Yellow-headed day gecko,0.3
