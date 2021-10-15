@@ -7,7 +7,7 @@ import time
 
 
 class App:
-    def __init__(self, name, width, height, fact_dict, tree_dict, learned_dict, model, max_edit_distance = 1):
+    def __init__(self, name, width, height, fact_dict, tree_dict, learned_dict, model, max_edit_distance = 2):
 
         # vars
         self.fact_dict = fact_dict

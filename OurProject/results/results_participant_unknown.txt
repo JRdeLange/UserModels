@@ -1,4 +1,19 @@
 trial,start_time,rt,correct,fact_id,question_type,question,answer,alpha
-1,0.0,1520.9423828125,True,29,Species,../species/29.png,Magnificent rabbitfish,0.3
-2,6928.141845703125,1040.810791015625,False,20,Species,../species/20.png,Taveta weaver,0.3
-3,13577.1669921875,1335.74267578125,False,15,Species,../species/15.png,Yellow-headed day gecko,0.3
+1,0.0,3000.0,False,26,Species,../species/26.png,Bicolored foxface,0.3
+2,19877.92333984375,3000.0,False,24,Species,../species/24.png,Yellow-spotted scorpionfish,0.3
+3,29799.240966796875,1360.80517578125,True,26,Species,../species/26.png,Bicolored foxface,0.3
+4,38449.94140625,3000.0,False,15,Species,../species/15.png,Yellow-headed day gecko,0.3
+5,47472.421875,3009.2490234375,True,24,Species,../species/24.png,Yellow-spotted scorpionfish,0.3
+6,56845.51318359375,3000.0,False,29,Species,../species/29.png,Magnificent rabbitfish,0.3
+7,64801.64990234375,1179.635498046875,True,15,Species,../species/15.png,Yellow-headed day gecko,0.3
+8,74160.0751953125,3000.0,False,23,Species,../species/23.png,Luna lionfish,0.3
+9,80101.12109375,4028.424560546875,False,29,Species,../species/29.png,Magnificent rabbitfish,0.3
+10,88055.18627929688,3000.0,False,21,Species,../species/21.png,Black-billed weaver,0.3
+11,95592.26391601562,2293.213134765625,False,23,Species,../species/23.png,Luna lionfish,0.3
+12,100869.30786132812,3000.0,False,14,Species,../species/14.png,Satanic leaf-tailed gecko,0.3
+13,108619.97827148438,3000.0,False,16,Species,../species/16.png,Blue-tailed day gecko,0.3
+14,116351.29516601562,2318.694580078125,True,21,Species,../species/21.png,Black-billed weaver,0.3
+15,124346.88110351562,1259.7900390625,True,14,Species,../species/14.png,Satanic leaf-tailed gecko,0.3
+16,133300.7275390625,8687.6669921875,False,16,Species,../species/16.png,Blue-tailed day gecko,0.3
+17,149289.15258789062,3000.0,False,27,Species,../species/27.png,Scribbled rabbitfish,0.3
+18,159000.7236328125,4789.38427734375,True,26,Species,../species/26.png,Bicolored foxface,0.349609375

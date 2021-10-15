@@ -4,17 +4,16 @@
 4;Family;Pterois, Sebastapistes;Scorpaenidae
 5;Family;Siganus;Siganidae
 6;Genus;Common flat-tail gecko, Satanic leaf-tailed gecko;Uroplatus
-7;Genus;Blue-tailed day gecko, Yellow-headed day gecko, Mauritius ornate day gecko;Phelsuma
+7;Genus;Blue-tailed day gecko, Yellow-headed day gecko;Phelsuma
 8;Genus;Red Bishop Weaver, Long-tailed widowbird;Euplectes
 9;Genus;Taveta weaver, Black-billed weaver;Malimbus
 10;Genus;Clearfin lionfish, Luna lionfish;Pterois
 11;Genus;Yellow spotted scorpionfish, Barchin scorpionfish;Sebastapistes
-12;Genus;Bicolored foxface, scribbled rabbitfish, goldspotted spinefoot, Magnificent rabbitfish;Siganus
+12;Genus;Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish;Siganus
 13;Species;../species/13.png;Common flat-tailed gecko
 14;Species;../species/14.png;Satanic leaf-tailed gecko
 15;Species;../species/15.png;Yellow-headed day gecko
 16;Species;../species/16.png;Blue-tailed day gecko
-17;Species;../species/17.png;Mauritius ornate day gecko
 18;Species;../species/18.png;Red Bishop Weaver
 19;Species;../species/19.png;Long-tailed widowbird
 20;Species;../species/20.png;Taveta weaver
@@ -25,5 +24,4 @@
 25;Species;../species/25.png;Barchin scorpionfish
 26;Species;../species/26.png;Bicolored foxface
 27;Species;../species/27.png;Scribbled rabbitfish
-28;Species;../species/28.png;Goldspotted spinefoot
 29;Species;../species/29.png;Magnificent rabbitfish
