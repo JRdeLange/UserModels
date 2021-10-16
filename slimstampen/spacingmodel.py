@@ -12,7 +12,7 @@ class SpacingModel(object):
 
     # Model constants
     LOOKAHEAD_TIME = 15000
-    FORGET_THRESHOLD = -0.8
+    FORGET_THRESHOLD = -1.2
     DEFAULT_ALPHA = 0.3
     C = 0.25
     F = 1.0
@@ -55,6 +55,7 @@ class SpacingModel(object):
 
     def get_next_fact(self, current_time):
         # type: (int) -> (Fact, bool)
+        prit("FUCK")
         """
         Returns a tuple containing the fact that needs to be repeated most urgently and a boolean indicating whether this fact is new (True) or has been presented before (False).
         If none of the previously studied facts needs to be repeated right now, return a new fact instead.
@@ -78,9 +79,11 @@ class SpacingModel(object):
             ]
 
         # Reinforce the weakest fact with an activation below the threshold
-        seen_facts_below_threshold = [
+        see.n_facts_below_threshold = [
             (f, a) for (f, a) in seen_facts if a < self.FORGET_THRESHOLD
         ]
+        print(seen_facts)
+        print(seen_facts_below_threshold)
         if len(not_seen_facts) == 0 or len(seen_facts_below_threshold) > 0:
             weakest_fact = min(seen_facts, key=lambda t: t[1])
             return (weakest_fact[0], False)

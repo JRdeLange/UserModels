@@ -7,7 +7,17 @@ import time
 
 
 class App:
-    def __init__(self, name, width, height, fact_dict, tree_dict, learned_dict, model, max_edit_distance = 2):
+    def __init__(
+        self,
+        name,
+        width,
+        height,
+        fact_dict,
+        tree_dict,
+        learned_dict,
+        model,
+        max_edit_distance=2,
+    ):
 
         # vars
         self.fact_dict = fact_dict
@@ -22,7 +32,7 @@ class App:
         frame = tk.Tk()
         frame.title(name)
         frame.geometry(f"{width}x{height}")
-        frame.config(background='#defcff')
+        frame.config(background="#defcff")
 
         frame.grid_rowconfigure(0, weight=0)  # question
         frame.grid_rowconfigure(1, weight=0)  # picture
@@ -47,25 +57,39 @@ class App:
         # self.input_textbox.place(x=width / 4, y=450)
 
         # Button Creation
-        self.Button = tk.Button(frame, text="Confirm", font=("Helvetica bold", 12), command=self.press_button, padx=8, pady=4, state=ACTIVE)
+        self.Button = tk.Button(
+            frame,
+            text="Confirm",
+            font=("Helvetica bold", 12),
+            command=self.press_button,
+            padx=8,
+            pady=4,
+            state=ACTIVE,
+        )
         self.Button.grid(row=9, column=0, pady=10)
         # self.Button.place(x=330, y=500)
 
         # Cue label Creation
-        self.cue_label = tk.Label(frame, text="", font=("Helvetica bold", 20), background='#defcff')
+        self.cue_label = tk.Label(
+            frame, text="", font=("Helvetica bold", 20), background="#defcff"
+        )
         self.cue_label.grid(row=0, column=0, pady=20)
         # self.cue_label.place(x=225, y=50)
 
         # Q example label Creation
-        self.q_examples_label = tk.Label(frame, text="", font=("Helvetica bold", 18), background='#defcff')
+        self.q_examples_label = tk.Label(
+            frame, text="", font=("Helvetica bold", 18), background="#defcff"
+        )
 
         # Answer label Creation
-        self.answer_label = tk.Label(frame, text="", font=("Helvetica bold", 15), background='#defcff')
+        self.answer_label = tk.Label(
+            frame, text="", font=("Helvetica bold", 15), background="#defcff"
+        )
         self.answer_label.grid(row=6, column=0, pady=5)
         # self.answer_label.place(x=230, y=420)
 
         # Image label Creation
-        self.image_label = tk.Label(frame, text="", background='#defcff')
+        self.image_label = tk.Label(frame, text="", background="#defcff")
 
         # time stuff
         self.app_start_time = time.time() * 1000
@@ -73,7 +97,9 @@ class App:
         self.response_time = 0
         # print("fact start time: ", self.fact_start_time)
         # display first fact
-        self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.fact_start_time)
+        self.current_fact, self.current_new = self.model.get_next_fact(
+            current_time=self.fact_start_time
+        )
         self.display_cue(self.current_fact)
         self.current_response = None
 
@@ -129,34 +155,57 @@ class App:
     def record_response(self, *args):
         # record response time once the first button is typed
         if len(self.input_textbox.get(1.0, "end-1c")) == 0:
-            self.response_time = (time.time() * 1000) - self.fact_start_time - self.app_start_time
+            self.response_time = (
+                (time.time() * 1000) - self.fact_start_time - self.app_start_time
+            )
             # print("response time: ", self.response_time)
         # print("we've got: ", len(self.input_textbox.get(1.0, "end-1c")))
 
     def press_button(self) -> None:
-        if self.Button['text'] == "Confirm":  # response given
+        if self.Button["text"] == "Confirm":  # response given
             # print("response time: ", self.response_time)
-            self.current_response = self.input_textbox.get(1.0, "end-1c")  # retrieve given response
+            self.current_response = self.input_textbox.get(
+                1.0, "end-1c"
+            )  # retrieve given response
             self.process_response(self.current_response)
             self.input_textbox.delete("1.0", "end")
             self.input_textbox.grid_forget()
 
-        elif self.Button['text'] == "Next":  # start of next fact shown
+        elif self.Button["text"] == "Next":  # start of next fact shown
             # print("fact start time: ", self.fact_start_time)
-            self.current_fact, self.current_new = self.model.get_next_fact(current_time=self.fact_start_time)  # get new fact
+            self.current_fact, self.current_new = self.model.get_next_fact(
+                current_time=self.fact_start_time
+            )  # get new fact
             self.display_cue(self.current_fact)  # display new fact
             # self.input_textbox.place(x=self.width / 4, y=450)  # place textbox
             self.input_textbox.grid(row=7, column=0, rowspan=2)
-            self.Button['text'] = "Confirm"
-            self.fact_start_time = (time.time() * 1000) - self.app_start_time  # get current time for when the fact is shown
+            self.Button["text"] = "Confirm"
+            self.fact_start_time = (
+                time.time() * 1000
+            ) - self.app_start_time  # get current time for when the fact is shown
 
     def process_response(self, output):
-        edit_distance = self.calc_levenshtein_dist(self.simplify_str(output), self.simplify_str(inp=self.current_fact.answer))
+        edit_distance = self.calc_levenshtein_dist(
+            self.simplify_str(output), self.simplify_str(inp=self.current_fact.answer)
+        )
         correct = edit_distance <= self.max_edit_distance
-        response = Response(self.current_fact, start_time=self.fact_start_time, rt=self.response_time, correct=correct)
+        if self.current_new:
+            response = Response(
+                self.current_fact,
+                start_time=self.fact_start_time,
+                rt=self.response_time,
+                correct=False,
+            )
+        else:
+            response = Response(
+                self.current_fact,
+                start_time=self.fact_start_time,
+                rt=self.response_time,
+                correct=correct,
+            )
         self.model.register_response(response)
         self.update_learned(correct)
-        self.Button['text'] = "Next"
+        self.Button["text"] = "Next"
 
     def update_learned(self, correct):
         if not self.current_new and correct:  # increase the number of correct responses
@@ -167,17 +216,28 @@ class App:
 
         for category in self.tree_dict:  # go through the parents
             add = True
-            for item in self.tree_dict[category]:  # go through the children of each parent
-                if self.learned_dict[self.fact_dict[item]] < 2:  # TODO: decide on a threshold for learned
+            for item in self.tree_dict[
+                category
+            ]:  # go through the children of each parent
+                if (
+                    self.learned_dict[self.fact_dict[item]] < 2
+                ):  # TODO: decide on a threshold for learned
                     add = False
-            if add and (self.fact_dict[category] not in self.model.facts):  # make sure the fact hasn't already been added
+            if add and (
+                self.fact_dict[category] not in self.model.facts
+            ):  # make sure the fact hasn't already been added
                 self.model.add_fact(self.fact_dict[category])
                 print("added: ", self.fact_dict[category])
 
         if correct:
             self.display_answer("That's correct!")
         else:
-            text = "Wrong, the answer is: " + self.current_fact.answer + " \n and you answered: " + self.current_response
+            text = (
+                "Wrong, the answer is: "
+                + self.current_fact.answer
+                + " \n and you answered: "
+                + self.current_response
+            )
             self.display_answer(text)
 
     @staticmethod
@@ -188,17 +248,18 @@ class App:
 
     @staticmethod
     def calc_levenshtein_dist(text_a, text_b):
-        if (len(text_a) > len(text_b)):
+        if len(text_a) > len(text_b):
             text_a, text_b = text_b, text_a
 
         distances = range(len(text_a) + 1)
         for i2, c2 in enumerate(text_b):
-            distances_ = [i2+1]
+            distances_ = [i2 + 1]
             for i1, c1 in enumerate(text_a):
                 if c1 == c2:
                     distances_.append(distances[i1])
                 else:
-                    distances_.append(1 + min((distances[i1], distances[i1 + 1], distances_[-1])))
+                    distances_.append(
+                        1 + min((distances[i1], distances[i1 + 1], distances_[-1]))
+                    )
             distances = distances_
         return distances[-1]
-
