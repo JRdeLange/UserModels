@@ -1,3 +1,0 @@
-trial,start_time,rt,correct,fact_id,question_type,question,answer,alpha
-1,0.0,6874.97265625,True,27,Species,../species/27.png,Scribbled rabbitfish,0.3
-2,7490.62353515625,9446.183349609375,True,27,Species,../species/27.png,Scribbled rabbitfish,0.3

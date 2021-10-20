@@ -5,7 +5,7 @@ import pandas as pd
 from collections import namedtuple
 
 Fact = namedtuple("Fact", ["fact_id", "question_type", "question", "answer"])
-Response = namedtuple("Response", "fact, start_time, rt, correct")
+Response = namedtuple("Response", "fact, response, first, start_time, rt, correct")
 Encounter = namedtuple("Encounter", "activation, time, reaction_time, decay")
 
 
