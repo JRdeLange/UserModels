@@ -1,0 +1,87 @@
+trial,response,first,start_time,rt,correct,fact_id,question_type,question,answer,alpha
+1,Bicolored foxface,True,0.0,10630.32177734375,False,26,Species,./species/26.png,Bicolored foxface,0.3
+2,Taveta weaver,True,20834.920166015625,4443.90283203125,False,20,Species,./species/20.png,Taveta weaver,0.3
+3,bicolored foxface,False,30636.35400390625,1226.658203125,True,26,Species,./species/26.png,Bicolored foxface,0.3
+4,Siganidae,True,37010.737548828125,5020.56689453125,False,5,Family,Siganus,Siganidae,0.3
+5,something weaver,False,46699.9892578125,7086.464111328125,False,20,Species,./species/20.png,Taveta weaver,0.3
+6,Pterois,True,62266.83984375,7904.886474609375,False,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.3
+7,Siganae,False,74050.91870117188,1524.281982421875,True,5,Family,Siganus,Siganidae,0.3
+8,Scorpaenidae,True,78983.81420898438,3084.38671875,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.3
+9,.,False,87098.36157226562,9190.680908203125,False,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.3
+10,Common flat-tailed gecko,True,101545.45288085938,2360.595703125,False,13,Species,./species/13.png,Common flat-tailed gecko,0.3
+11,Sebastapistae,False,111238.44970703125,3155.4560546875,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.3
+12,Yellow-headed day gecko,True,124849.1171875,1987.09326171875,False,15,Species,./species/15.png,Yellow-headed day gecko,0.3
+13,Common tailed gecko,False,132857.44848632812,1337.8984375,False,13,Species,./species/13.png,Common flat-tailed gecko,0.3
+14,Clearfin lionfish,True,141334.58447265625,1643.61865234375,False,22,Species,./species/22.png,Clearfin lionfish,0.3
+15,Colored gecko,False,147349.57470703125,1878.650146484375,False,15,Species,./species/15.png,Yellow-headed day gecko,0.3
+16,Tailfish,False,155221.302734375,13482.351806640625,False,26,Species,./species/26.png,Bicolored foxface,0.349609375
+17,Clownfish,False,172704.19067382812,5650.716064453125,False,22,Species,./species/22.png,Clearfin lionfish,0.3
+18,Yellow weaver,False,183961.78784179688,7606.880126953125,False,20,Species,./species/20.png,Taveta weaver,0.349609375
+19,Satanic leaf-tailed gecko,True,196367.75,2306.787109375,False,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.3
+20,Siganidae,False,203932.29223632812,1470.13232421875,True,5,Family,Siganus,Siganidae,0.250390625
+21,Pterotidae,False,209470.03540039062,3744.52001953125,False,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.349609375
+22,Satanic double-tailed gecko,False,218593.14184570312,10076.905517578125,False,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.3
+23,Yellow-spotted scorpionfish,True,236645.78979492188,3537.1962890625,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.3
+24,Sebastapistae,False,247898.35473632812,6501.440673828125,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.349609375
+25,.,False,270025.3195800781,14686.778564453125,False,26,Species,./species/26.png,Bicolored foxface,0.39374999999999993
+26,.,False,287256.2880859375,39096.259765625,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.3
+27,Common leaf-tailed gecko,False,329644.3283691406,3135.54931640625,False,13,Species,./species/13.png,Common flat-tailed gecko,0.349609375
+28,Common weaver,False,339360.9050292969,10562.0009765625,False,20,Species,./species/20.png,Taveta weaver,0.39921874999999996
+29,Yellow two-tailed gecko,False,353818.29638671875,7109.0361328125,False,15,Species,./species/15.png,Yellow-headed day gecko,0.349609375
+30,Pterois,False,371414.6767578125,14227.45068359375,True,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.39921874999999996
+31,Colored finfish,False,388900.1174316406,6797.426025390625,False,22,Species,./species/22.png,Clearfin lionfish,0.349609375
+32,Common redfin,False,402140.3654785156,4010.04052734375,False,26,Species,./species/26.png,Bicolored foxface,0.418359375
+33,Sebastapidae,False,413026.82421875,12926.958251953125,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.39921874999999996
+34,Satanic two-tailed gecko,False,431593.0837402344,2392.616943359375,False,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.349609375
+35,Tatanic weaver,False,441544.73974609375,6160.801025390625,False,20,Species,./species/20.png,Taveta weaver,0.4058593749999999
+36,Pterois,False,467296.0539550781,6561.34423828125,True,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.412109375
+37,Common two-tailed gecko,False,477377.3525390625,5046.63330078125,False,13,Species,./species/13.png,Common flat-tailed gecko,0.39921874999999996
+38,Colored two-tailed gecko,False,488448.08251953125,5094.554443359375,False,15,Species,./species/15.png,Yellow-headed day gecko,0.39921874999999996
+39,Fish,False,503868.7863769531,6944.8388671875,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.349609375
+40,Scorpionidae,False,513676.9982910156,3656.88818359375,True,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.4042968749999999
+41,Common finfish,False,528181.1118164062,1678.70068359375,False,26,Species,./species/26.png,Bicolored foxface,0.42578125
+42,Common finfish,False,535461.4169921875,3798.806640625,False,22,Species,./species/22.png,Clearfin lionfish,0.39921874999999996
+43,Satanic leaf-tailed gecko,False,544492.2294921875,2414.923583984375,True,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.34921875
+44,Common two-tailed gecko,False,552733.4572753906,14534.652099609375,False,13,Species,./species/13.png,Common flat-tailed gecko,0.40351562499999993
+45,Color-day gecko,False,581913.7841796875,2630.55419921875,False,15,Species,./species/15.png,Yellow-headed day gecko,0.4058593749999999
+46,Tataris weaver,False,595924.4572753906,5551.0322265625,False,20,Species,./species/20.png,Taveta weaver,0.43046874999999996
+47,Pterois,False,606197.3537597656,7027.869140625,True,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.43671875000000004
+48,Clear twofish,False,616564.7897949219,11440.96240234375,False,22,Species,./species/22.png,Clearfin lionfish,0.4019531249999999
+49,Fish,False,638124.7770996094,10993.87939453125,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.3671875
+50,Scorpionidae,False,653436.7829589844,2693.230224609375,True,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.40312499999999984
+51,Common finfish,False,662811.8190917969,2518.255859375,False,26,Species,./species/26.png,Bicolored foxface,0.44414062500000007
+52,Common two-tailed gecko,False,670271.9699707031,2247.438232421875,False,13,Species,./species/13.png,Common flat-tailed gecko,0.4039062499999999
+53,Taveta weaver,False,685536.6977539062,3393.259765625,True,20,Species,./species/20.png,Taveta weaver,0.441015625
+54,Ptoris,False,696504.2145996094,35674.411865234375,True,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.4550781250000001
+55,Color-day gecko,False,741728.2900390625,7208.568603515625,False,15,Species,./species/15.png,Yellow-headed day gecko,0.40703124999999996
+56,Two fish,False,757088.4104003906,25895.40380859375,False,22,Species,./species/22.png,Clearfin lionfish,0.40312499999999996
+57,Common foxfish,False,787784.40625,3913.753662109375,False,26,Species,./species/26.png,Bicolored foxface,0.46796875000000004
+58,Pterois,False,801742.876953125,1752.896728515625,True,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.45468750000000013
+59,Satanic leaf-tailed gecko,False,806910.0004882812,3185.8681640625,True,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.343359375
+60,Fish,False,816128.8327636719,6514.326904296875,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.36835937500000004
+61,Taveta weaver,False,826469.0537109375,2090.35205078125,True,20,Species,./species/20.png,Taveta weaver,0.44062500000000004
+62,Pterois,False,834442.9184570312,1476.945068359375,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.4035156249999998
+63,Common flat-tailed gecko,False,842283.3210449219,20848.48681640625,True,13,Species,./species/13.png,Common flat-tailed gecko,0.4042968749999999
+64,Bicolored foxfish,False,869697.1186523438,8478.997314453125,False,26,Species,./species/26.png,Bicolored foxface,0.480078125
+65,yellow gecko,False,888218.576171875,8855.046630859375,False,15,Species,./species/15.png,Yellow-headed day gecko,0.40742187499999993
+66,pterois,False,913367.080078125,2238.947265625,True,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.45429687500000016
+67,fish,False,920040.63671875,12727.367919921875,False,22,Species,./species/22.png,Clearfin lionfish,0.40351562499999993
+68,bicolored foxface,False,936179.7260742188,1445.95068359375,True,26,Species,./species/26.png,Bicolored foxface,0.47968750000000004
+69,tavena weaver,False,947080.482421875,2562.318359375,True,20,Species,./species/20.png,Taveta weaver,0.44023437500000007
+70,barchin scorpionfish,True,957292.7141113281,2004.34521484375,False,25,Species,./species/25.png,Barchin scorpionfish,0.3
+71,Siganus,True,967882.1000976562,4920.91748046875,False,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.3
+72,Euplectes,True,979026.9702148438,2626.383056640625,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.3
+73,.,False,988868.2470703125,57268.638916015625,False,25,Species,./species/25.png,Barchin scorpionfish,0.3
+74,Scenidae,False,1049077.1845703125,6689.84423828125,False,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.3
+75,.,False,1060432.1374511719,23438.649658203125,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.3
+76,Bicolored foxface,False,1086165.4216308594,8226.791259765625,True,26,Species,./species/26.png,Bicolored foxface,0.4980468750000001
+77,Scanidae,False,1100147.2797851562,20015.773681640625,False,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.4695312500000002
+78,Fish,False,1124350.705078125,16580.772705078125,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.40546875000000004
+79,Scorpionidae,False,1143442.0952148438,19993.615234375,True,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.4093749999999998
+80,Common flat-tailed gecko,False,1170050.4008789062,9802.30859375,True,13,Species,./species/13.png,Common flat-tailed gecko,0.45390624999999984
+81,Yellow-headed gecko,False,1188019.8020019531,24520.662109375,False,15,Species,./species/15.png,Yellow-headed day gecko,0.4570312499999999
+82,bicolored foxface,False,1220644.4970703125,1322.454833984375,True,26,Species,./species/26.png,Bicolored foxface,0.49765625000000013
+83,black scorpionfish,False,1226636.8405761719,4852.727294921875,False,25,Species,./species/25.png,Barchin scorpionfish,0.347265625
+84,taveta weaver,False,1242153.0795898438,2610.966552734375,True,20,Species,./species/20.png,Taveta weaver,0.40703125000000007
+85,common flat-tailed gecko,False,1257971.33984375,1946.5341796875,True,13,Species,./species/13.png,Common flat-tailed gecko,0.45351562499999987
+86,yellow-headed day gecko,False,1275292.21484375,1575.0498046875,True,15,Species,./species/15.png,Yellow-headed day gecko,0.4566406249999999
