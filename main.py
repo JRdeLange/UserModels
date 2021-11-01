@@ -38,7 +38,13 @@ def main(argv):
         os.makedirs("results")
 
     if len(argv) == 3:
-        data = "results/results_" + str(hierarchy) + "_participant_" + str(argv[2]) + ".txt"
+        data = (
+            "results/results_"
+            + str(hierarchy)
+            + "_participant_"
+            + str(argv[2])
+            + ".txt"
+        )
     else:
         data = "results/results_" + str(hierarchy) + "_participant_unknown.txt"
     m.export_data(data)
