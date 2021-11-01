@@ -192,6 +192,8 @@ class App:
         if self.current_new:
             response = Response(
                 self.current_fact,
+                output,
+                self.current_new,
                 start_time=self.fact_start_time,
                 rt=self.response_time,
                 correct=False,
@@ -199,6 +201,8 @@ class App:
         else:
             response = Response(
                 self.current_fact,
+                output,
+                self.current_new,
                 start_time=self.fact_start_time,
                 rt=self.response_time,
                 correct=correct,

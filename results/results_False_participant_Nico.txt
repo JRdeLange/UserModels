@@ -1,0 +1,71 @@
+trial,response,first,start_time,rt,correct,fact_id,question_type,question,answer,alpha
+1,blue tailed day gecko,True,0.0,8513.714111328125,False,16,Species,./species/16.png,Blue-tailed day gecko,0.3
+2,siganidae,True,28056.018798828125,6389.099365234375,False,5,Family,Siganus,Siganidae,0.3
+3,blue tailed day gecko,False,45848.654052734375,2936.892822265625,True,16,Species,./species/16.png,Blue-tailed day gecko,0.3
+4,siganidae,False,65266.11279296875,2514.99755859375,True,5,Family,Siganus,Siganidae,0.3
+5,chordata,True,75560.58349609375,7482.595703125,False,1,Phylum,"Gekkonidae, Ploceidae, Scorpaenidae, Siganidae",Chordata,0.3
+6,long tailed widowbird,True,90182.12182617188,5967.39794921875,False,19,Species,./species/19.png,Long-tailed widowbird,0.3
+7,,False,110286.76904296875,5967.39794921875,False,1,Phylum,"Gekkonidae, Ploceidae, Scorpaenidae, Siganidae",Chordata,0.3
+8,long tailed widowbird,False,137483.56909179688,1999.567626953125,True,19,Species,./species/19.png,Long-tailed widowbird,0.3
+9,scorpaenidae,True,149949.44116210938,7920.02490234375,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.3
+10,common flat tailed gecko,True,169882.2373046875,6154.853515625,False,13,Species,./species/13.png,Common flat-tailed gecko,0.3
+11,scorpaenidae,False,190971.62646484375,20760.847412109375,True,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.3
+12,straight tailed gecko,False,222167.49365234375,8810.474609375,False,13,Species,./species/13.png,Common flat-tailed gecko,0.3
+13,blue tailed day gecko,False,247567.80688476562,2124.536376953125,True,16,Species,./species/16.png,Blue-tailed day gecko,0.250390625
+14,siganidae,False,261720.78125,1827.69921875,True,5,Family,Siganus,Siganidae,0.250390625
+15,chordatae,False,270624.9523925781,3186.750244140625,True,1,Phylum,"Gekkonidae, Ploceidae, Scorpaenidae, Siganidae",Chordata,0.275390625
+16,long tailed widowbird,False,285215.2487792969,4795.71923828125,True,19,Species,./species/19.png,Long-tailed widowbird,0.349609375
+17,,True,302929.86083984375,4795.71923828125,False,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.3
+18,euplectes,True,309131.5693359375,9060.37890625,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.3
+19,chordata,False,327017.9719238281,5967.31689453125,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.349609375
+20,satanic leaftailed gecko,False,345430.0954589844,12950.091796875,True,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.3
+21,euclepes,False,373048.6442871094,9482.10791015625,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.3
+22,straight tailed gecko,False,394856.03173828125,2874.368896484375,False,13,Species,./species/13.png,Common flat-tailed gecko,0.349609375
+23,long tailed widowbird,False,416413.5056152344,1812.105224609375,True,19,Species,./species/19.png,Long-tailed widowbird,0.30000000000000004
+24,sipanidae,False,429144.90283203125,8091.88623046875,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.38828125
+25,ploceidae,True,448952.75927734375,5733.073974609375,False,3,Family,"Euplectus, Malimbus",Ploceidae,0.3
+26,sebatapistes,True,474915.4855957031,4998.83154296875,False,11,Genus,"Yellow spotted scorpionfish, Barchin scorpionfish",Sebastapistes,0.3
+27,scorpanidae,False,491421.7888183594,5842.38037109375,False,3,Family,"Euplectus, Malimbus",Ploceidae,0.3
+28,tailleafed gecko,False,511417.0783691406,36444.641845703125,False,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.349609375
+29,pleucedes,False,561795.9594726562,12622.054931640625,False,11,Genus,"Yellow spotted scorpionfish, Barchin scorpionfish",Sebastapistes,0.3
+30,common tail gecko,False,586540.1369628906,2889.986328125,False,13,Species,./species/13.png,Common flat-tailed gecko,0.375
+31,pleucedes,False,619860.4733886719,10107.014404296875,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.41289062500000007
+32,eupledes,False,638093.1430664062,14746.630859375,True,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.349609375
+33,satanic leaftailed gecko,False,658197.8505859375,8013.7978515625,True,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.384375
+34,scorpanidae,False,687191.072265625,4030.347412109375,False,3,Family,"Euplectus, Malimbus",Ploceidae,0.349609375
+35,common tailed gecko,False,698657.1467285156,17011.687255859375,False,13,Species,./species/13.png,Common flat-tailed gecko,0.375390625
+36,scorpanidae,False,726666.2255859375,5592.47802734375,True,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.42500000000000004
+37,,False,740522.3171386719,3702.357421875,False,11,Genus,"Yellow spotted scorpionfish, Barchin scorpionfish",Sebastapistes,0.337890625
+38,eupecledes,False,772546.1123046875,5027.6298828125,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.35546875
+39,satanic leaftailed gecko,False,788743.0358886719,2124.513671875,True,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.37226562500000004
+40,ploseidae,False,806738.8410644531,37007.003173828125,True,3,Family,"Euplectus, Malimbus",Ploceidae,0.38359374999999996
+41,chordata,False,860210.7106933594,4061.505859375,True,1,Phylum,"Gekkonidae, Ploceidae, Scorpaenidae, Siganidae",Chordata,0.2984375
+42,pleucedes,False,875004.1237792969,7310.828125,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.43085937500000004
+43,,False,889000.8510742188,7310.828125,False,11,Genus,"Yellow spotted scorpionfish, Barchin scorpionfish",Sebastapistes,0.375
+44,common tailed day gecko,False,908543.158203125,4280.208984375,False,13,Species,./species/13.png,Common flat-tailed gecko,0.39296875
+45,,False,936052.3405761719,4280.208984375,False,3,Family,"Euplectus, Malimbus",Ploceidae,0.387109375
+46,,False,964359.3779296875,4280.208984375,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.35664062500000004
+47,chordata,False,1004490.6198730469,4452.1240234375,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.4554687500000001
+48,sebastapides,False,1016175.3850097656,3967.8623046875,True,11,Genus,"Yellow spotted scorpionfish, Barchin scorpionfish",Sebastapistes,0.376953125
+49,satanic leaftailed gecko,False,1037842.1860351562,4264.59912109375,True,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.384375
+50,longtailed widowbird,False,1056447.2116699219,1640.287353515625,True,19,Species,./species/19.png,Long-tailed widowbird,0.2503906250000001
+51,common flattailed gecko,False,1072693.4262695312,2999.327880859375,True,13,Species,./species/13.png,Common flat-tailed gecko,0.392578125
+52,ploseidae,False,1092454.3825683594,9935.314208984375,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.4769531250000001
+53,ploseidae,False,1110872.0500488281,16605.453125,True,3,Family,"Euplectus, Malimbus",Ploceidae,0.41171875
+54,yellow headed day gecko,True,1135975.5583496094,5686.202392578125,False,15,Species,./species/15.png,Yellow-headed day gecko,0.3
+55,luna lionfish,True,1160454.2075195312,2499.453125,False,23,Species,./species/23.png,Luna lionfish,0.3
+56,yellowheaded day gecko,False,1172045.2456054688,2608.799560546875,True,15,Species,./species/15.png,Yellow-headed day gecko,0.3
+57,scorpanidae,False,1186088.8374023438,8263.731201171875,True,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.48906250000000007
+58,luna lionfish,False,1208880.3762207031,1874.60986328125,True,23,Species,./species/23.png,Luna lionfish,0.3
+59,euplectus,False,1219221.71484375,46025.102783203125,False,11,Genus,"Yellow spotted scorpionfish, Barchin scorpionfish",Sebastapistes,0.3890625
+60,scorpanidae,False,1274713.3405761719,17480.3203125,False,3,Family,"Euplectus, Malimbus",Ploceidae,0.43632812500000007
+61,scorpanidae,False,1300441.6977539062,7748.22802734375,True,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.5136718750000001
+62,satanic leaftailed day gecko,False,1315328.8342285156,1905.775634765625,False,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.40742187500000004
+63,euplectus,False,1340151.1628417969,8857.327392578125,True,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.40625
+64,yellow headed day gecko,False,1357194.0537109375,2280.75341796875,True,15,Species,./species/15.png,Yellow-headed day gecko,0.250390625
+65,PLOCEIDAE,False,1374627.4916992188,25559.21337890625,False,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.5375000000000001
+66,ploceidae,False,1408356.6196289062,10263.20458984375,True,3,Family,"Euplectus, Malimbus",Ploceidae,0.45000000000000007
+67,luna lionfish,False,1425555.6916503906,1999.609619140625,True,23,Species,./species/23.png,Luna lionfish,0.250390625
+68,scorpanidae,False,1435100.3669433594,25322.248779296875,True,4,Family,"Pterois, Sebastapistes",Scorpaenidae,0.5402343750000002
+69,common tailed gecko,False,1467217.8620605469,1921.464599609375,False,13,Species,./species/13.png,Common flat-tailed gecko,0.4359375
+70,euplectus,False,1513082.1384277344,12184.69140625,True,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.41289062499999996

@@ -1,0 +1,147 @@
+trial,response,first,start_time,rt,correct,fact_id,question_type,question,answer,alpha
+1,"luna lionfish
+",True,0.0,4406.86376953125,False,23,Species,./species/23.png,Luna lionfish,0.3
+2,black-billed weaver,True,13128.250732421875,1671.406005859375,False,21,Species,./species/21.png,Black-billed weaver,0.3
+3,"luna lionsfish
+",False,20708.497802734375,1084.055908203125,True,23,Species,./species/23.png,Luna lionfish,0.3
+4,"yellow-spotted scorpionfish
+",True,26888.6728515625,1803.293212890625,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.3
+5,"black-billed weaver
+",False,39115.211669921875,1607.52099609375,True,21,Species,./species/21.png,Black-billed weaver,0.3
+6,clearfin lionfish,True,47774.875732421875,1665.986083984375,False,22,Species,./species/22.png,Clearfin lionfish,0.3
+7,d,False,56699.03662109375,13596.557373046875,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.3
+8,common flat-tailed gecko,True,72635.8876953125,1678.746337890625,False,13,Species,./species/13.png,Common flat-tailed gecko,0.3
+9,"flat-finned lionfish
+",False,83090.81372070312,8093.322998046875,False,22,Species,./species/22.png,Clearfin lionfish,0.3
+10,"red bishop weaver
+",True,103430.89477539062,3126.02587890625,False,18,Species,./species/18.png,Red Bishop Weaver,0.3
+11,gecko,False,121711.26977539062,2501.659912109375,False,13,Species,./species/13.png,Common flat-tailed gecko,0.3
+12,,False,127621.51098632812,2501.659912109375,False,18,Species,./species/18.png,Red Bishop Weaver,0.3
+13,scribbled rabbitfish,True,133484.09985351562,1892.86181640625,False,27,Species,./species/27.png,Scribbled rabbitfish,0.3
+14,blue-finned scorpionfish,False,141945.8798828125,8339.94873046875,False,23,Species,./species/23.png,Luna lionfish,0.349609375
+15,yellow-headed day gecko,True,164293.9609375,1406.3759765625,False,15,Species,./species/15.png,Yellow-headed day gecko,0.3
+16,,False,175183.40087890625,1406.3759765625,False,27,Species,./species/27.png,Scribbled rabbitfish,0.3
+17,yellow breasted weaver,False,195461.89672851562,2353.106201171875,False,21,Species,./species/21.png,Black-billed weaver,0.349609375
+18,gecko,False,206437.73388671875,2243.001220703125,False,15,Species,./species/15.png,Yellow-headed day gecko,0.3
+19,scorpionfish,False,211699.34375,3451.0908203125,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.349609375
+20,clearfin lionfish,False,225534.5458984375,10088.36181640625,True,22,Species,./species/22.png,Clearfin lionfish,0.349609375
+21,luna lionfish,False,242649.84594726562,1249.0908203125,True,23,Species,./species/23.png,Luna lionfish,0.30000000000000004
+22,common gecko,False,249378.9697265625,1699.6650390625,False,13,Species,./species/13.png,Common flat-tailed gecko,0.349609375
+23,,False,258560.9677734375,1699.6650390625,False,18,Species,./species/18.png,Red Bishop Weaver,0.349609375
+24,bicolored foxface,True,262891.4548339844,2042.48095703125,False,26,Species,./species/26.png,Bicolored foxface,0.3
+25,blue-tailed gecko,True,272538.7087402344,1687.129150390625,False,16,Species,./species/16.png,Blue-tailed day gecko,0.3
+26,black-billed weaver,False,279142.85693359375,3178.94384765625,True,21,Species,./species/21.png,Black-billed weaver,0.365625
+27,,False,292163.095703125,3178.94384765625,False,26,Species,./species/26.png,Bicolored foxface,0.3
+28,blue gecko,False,297691.4328613281,1422.214111328125,False,16,Species,./species/16.png,Blue-tailed day gecko,0.3
+29,yellow-spotted scorpionfish,False,303340.0227050781,2921.462158203125,True,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.34921875
+30,,False,312862.81982421875,2921.462158203125,False,27,Species,./species/27.png,Scribbled rabbitfish,0.349609375
+31,clearfin lionfish,False,316156.4357910156,2453.615966796875,True,22,Species,./species/22.png,Clearfin lionfish,0.34921875
+32,satanic leaf-tailed gecko,True,325796.95166015625,1823.43505859375,False,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.3
+33,common day gecko,False,334537.8669433594,2697.526611328125,False,15,Species,./species/15.png,Yellow-headed day gecko,0.349609375
+34,barchin scorpionfish,True,344206.5236816406,1489.826171875,False,25,Species,./species/25.png,Barchin scorpionfish,0.3
+35,satanic leaf day gecko,False,356889.298828125,1456.293701171875,False,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.3
+36,common flat-tailed gecko,False,368911.68896484375,1841.307861328125,True,13,Species,./species/13.png,Common flat-tailed gecko,0.34921875
+37,brua,False,378604.1140136719,2328.148681640625,False,25,Species,./species/25.png,Barchin scorpionfish,0.3
+38,,False,385423.2507324219,2328.148681640625,False,18,Species,./species/18.png,Red Bishop Weaver,0.39921874999999996
+39,magnificent rabbitfish,True,389248.4196777344,1472.64404296875,False,29,Species,./species/29.png,Magnificent rabbitfish,0.3
+40,taveta weaver,True,397710.85693359375,1708.0009765625,False,20,Species,./species/20.png,Taveta weaver,0.3
+41,,False,403642.9528808594,1708.0009765625,False,27,Species,./species/27.png,Scribbled rabbitfish,0.38749999999999996
+42,magnificent ,False,409283.8986816406,2216.446044921875,False,29,Species,./species/29.png,Magnificent rabbitfish,0.3
+43,black-billed weaver,False,427629.2287597656,4303.370849609375,True,21,Species,./species/21.png,Black-billed weaver,0.371484375
+44,yellow weaver,False,437147.2878417969,1826.9208984375,False,20,Species,./species/20.png,Taveta weaver,0.3
+45,bicolored foxface,False,445451.68359375,2289.745361328125,True,26,Species,./species/26.png,Bicolored foxface,0.250390625
+46,common blue day gecko,False,454348.61279296875,1582.339111328125,False,16,Species,./species/16.png,Blue-tailed day gecko,0.349609375
+47,red bishop weaver,False,468136.5148925781,1262.823974609375,True,18,Species,./species/18.png,Red Bishop Weaver,0.3886718749999999
+48,day gecko,False,473361.69970703125,3532.379150390625,False,15,Species,./species/15.png,Yellow-headed day gecko,0.390625
+49,satanic leaf-tailed gecko,False,480781.8518066406,1530.248046875,True,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.250390625
+50,scribbled rabbitfish,False,488929.2099609375,1958.144775390625,True,27,Species,./species/27.png,Scribbled rabbitfish,0.38554687499999996
+51,yellow-spotted scorpionfish,False,499631.7839355469,2196.474609375,True,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.34882812500000004
+52,barchin scorpionfish,False,508507.4797363281,2073.91796875,True,25,Species,./species/25.png,Barchin scorpionfish,0.250390625
+53,clearfin lionfish,False,518585.7878417969,1453.64111328125,True,22,Species,./species/22.png,Clearfin lionfish,0.34882812500000004
+54,long-tailed widowbird,True,526457.8120117188,1056.187744140625,False,19,Species,./species/19.png,Long-tailed widowbird,0.3
+55,rabbitfish,False,533950.1696777344,13038.812255859375,False,29,Species,./species/29.png,Magnificent rabbitfish,0.349609375
+56,blue-tailed day gecko,False,550699.216796875,1478.168212890625,True,16,Species,./species/16.png,Blue-tailed day gecko,0.34921875
+57,,False,557013.4868164062,1478.168212890625,False,19,Species,./species/19.png,Long-tailed widowbird,0.3
+58,yellow-headed day gecko,False,560659.9028320312,1499.987060546875,True,15,Species,./species/15.png,Yellow-headed day gecko,0.38945312499999996
+59,flat-tailed day gecko,False,567865.2678222656,2062.375,False,13,Species,./species/13.png,Common flat-tailed gecko,0.386328125
+60,taveta weaver,False,574804.1569824219,2638.10986328125,True,20,Species,./species/20.png,Taveta weaver,0.275390625
+61,black-billed weaver,False,582436.7097167969,4107.8291015625,True,21,Species,./species/21.png,Black-billed weaver,0.375
+62,red bishop weaver,False,593896.6726074219,1713.67919921875,True,18,Species,./species/18.png,Red Bishop Weaver,0.38749999999999984
+63,magnificent rabbitfish,False,598827.2358398438,1750.958984375,True,29,Species,./species/29.png,Magnificent rabbitfish,0.34921875
+64,scribbled rabbitfish,False,606117.5966796875,1631.442138671875,True,27,Species,./species/27.png,Scribbled rabbitfish,0.38515625
+65,luna lionfish,False,612116.8737792969,2959.951904296875,True,23,Species,./species/23.png,Luna lionfish,0.312109375
+66,pterois,True,619966.8957519531,6830.9169921875,False,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.3
+67,common flat-tailed gecko,False,631632.8986816406,2109.498046875,True,13,Species,./species/13.png,Common flat-tailed gecko,0.37421875000000004
+68,pterois,False,642931.0427246094,2092.293212890625,True,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.3
+69,black-tailed weaver,False,648791.666015625,1758.32568359375,False,19,Species,./species/19.png,Long-tailed widowbird,0.349609375
+70,yellow-headed day gecko,False,657720.2685546875,1321.8203125,True,15,Species,./species/15.png,Yellow-headed day gecko,0.38671875
+71,yellow-spotted scorpionfish,False,664368.5876464844,1782.56640625,True,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.34296875000000004
+72,blue-tailed day gecko,False,673551.3698730469,1369.425048828125,True,16,Species,./species/16.png,Blue-tailed day gecko,0.34882812500000004
+73,phelsuma,True,679223.3547363281,1599.973876953125,False,7,Genus,"Blue-tailed day gecko, Yellow-headed day gecko",Phelsuma,0.3
+74,clearfin lionfish,False,690183.1979980469,1713.7216796875,True,22,Species,./species/22.png,Clearfin lionfish,0.3070312500000001
+75,phelsuma,False,697483.96484375,7172.406005859375,True,7,Genus,"Blue-tailed day gecko, Yellow-headed day gecko",Phelsuma,0.3
+76,"black-billed weaver
+",False,708065.3776855469,8665.19921875,True,21,Species,./species/21.png,Black-billed weaver,0.42460937499999996
+77,black-tailed widowbird,False,723507.6105957031,4150.0712890625,False,19,Species,./species/19.png,Long-tailed widowbird,0.39921874999999996
+78,pterois,False,733753.5727539062,1624.965087890625,True,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.250390625
+79,red bishop weaver,False,737518.9438476562,3413.84619140625,True,18,Species,./species/18.png,Red Bishop Weaver,0.3878906249999998
+80,magnificent rabbitfish,False,744801.421875,1153.599853515625,True,29,Species,./species/29.png,Magnificent rabbitfish,0.341796875
+81,scribbled rabbitfish,False,751044.9069824219,2225.280029296875,True,27,Species,./species/27.png,Scribbled rabbitfish,0.36054687499999993
+82,black-billed weaver,False,757344.2329101562,1282.8330078125,True,21,Species,./species/21.png,Black-billed weaver,0.42421875
+83,long-tailed widowbird,False,763904.7697753906,1225.865234375,True,19,Species,./species/19.png,Long-tailed widowbird,0.398828125
+84,pheluma,False,769615.1896972656,2391.160888671875,True,7,Genus,"Blue-tailed day gecko, Yellow-headed day gecko",Phelsuma,0.250390625
+85,yellow-headed day gecko,False,778500.6525878906,1423.423095703125,True,15,Species,./species/15.png,Yellow-headed day gecko,0.33710937500000004
+86,common flat-tailed gecko,False,785573.8957519531,1334.680908203125,True,13,Species,./species/13.png,Common flat-tailed gecko,0.33710937500000004
+87,taveta weaver,False,792575.6999511719,2008.219970703125,True,20,Species,./species/20.png,Taveta weaver,0.2671875
+88,malimbus,True,798220.7507324219,1362.34814453125,False,9,Genus,"Taveta weaver, Black-billed weaver",Malimbus,0.3
+89,blue-tailed day gecko,False,815384.1027832031,2138.302978515625,True,16,Species,./species/16.png,Blue-tailed day gecko,0.31328125000000007
+90,malimbus,False,822061.7019042969,2025.599853515625,True,9,Genus,"Taveta weaver, Black-billed weaver",Malimbus,0.3
+91,luna lionfish,False,827044.4677734375,2615.245849609375,True,23,Species,./species/23.png,Luna lionfish,0.31484375
+92,black-billed weaver,False,834541.33203125,1788.33251953125,True,21,Species,./species/21.png,Black-billed weaver,0.423828125
+93,long-tailed widowbird,False,840464.6086425781,1683.75439453125,True,19,Species,./species/19.png,Long-tailed widowbird,0.3984375
+94,euplectes,True,848150.5998535156,4889.68701171875,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.3
+95,red bishop weaver,False,862827.8447265625,1251.6533203125,True,18,Species,./species/18.png,Red Bishop Weaver,0.33828124999999987
+96,lectae,False,870741.0737304688,12644.2880859375,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.3
+97,"bicolored foxface
+",False,886636.224609375,3236.546142578125,True,26,Species,./species/26.png,Bicolored foxface,0.2875
+98,siganus,True,895013.4128417969,4945.48095703125,False,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.3
+99,malimbus,False,902348.6877441406,2969.669921875,True,9,Genus,"Taveta weaver, Black-billed weaver",Malimbus,0.30585937500000004
+100,siganus,False,908376.8967285156,1422.8740234375,True,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.3
+101,yellow-spotted scorpionfish,False,911744.8520507812,1453.382568359375,True,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.2933593750000001
+102,maginificent rabbitfish,False,919910.8569335938,2251.4619140625,True,29,Species,./species/29.png,Magnificent rabbitfish,0.3140625
+103,satanic leaf-tailed gecko,False,930951.884765625,1259.43603515625,True,14,Species,./species/14.png,Satanic leaf-tailed gecko,0.20078125
+104,uroplatus,True,939583.9267578125,2164.588134765625,False,6,Genus,"Common flat-tail gecko, Satanic leaf-tailed gecko",Uroplatus,0.3
+105,ecplectis,False,948267.8627929688,15033.033935546875,True,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.349609375
+106,siganus,False,969523.4350585938,6380.31982421875,False,6,Genus,"Common flat-tail gecko, Satanic leaf-tailed gecko",Uroplatus,0.3
+107,long-tailed blackwidow,False,981627.337890625,5226.436767578125,False,19,Species,./species/19.png,Long-tailed widowbird,0.423828125
+108,black-billed weaver,False,995166.4797363281,5280.208984375,True,21,Species,./species/21.png,Black-billed weaver,0.43671875000000004
+109,siganus,False,1005173.2580566406,2873.41455078125,True,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.250390625
+110,siganidae,True,1010575.9538574219,1615.968017578125,False,5,Family,Siganus,Siganidae,0.3
+111,uplotas,False,1016493.0476074219,3726.993408203125,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.39921874999999996
+112,signaed,False,1026241.5087890625,2649.80078125,False,5,Family,Siganus,Siganidae,0.3
+113,barchin scorpionfish,False,1038944.8518066406,1873.997802734375,True,25,Species,./species/25.png,Barchin scorpionfish,0.2125
+114,sabastapistes,True,1047139.9929199219,1754.203857421875,False,11,Genus,"Yellow spotted scorpionfish, Barchin scorpionfish",Sebastapistes,0.3
+115,long-tailed widowbird,False,1055542.6257324219,1363.47412109375,True,19,Species,./species/19.png,Long-tailed widowbird,0.37421875000000004
+116,a,False,1063670.6130371094,4343.433837890625,False,11,Genus,"Yellow spotted scorpionfish, Barchin scorpionfish",Sebastapistes,0.3
+117,uplota,False,1072225.3466796875,3176.43603515625,False,6,Genus,"Common flat-tail gecko, Satanic leaf-tailed gecko",Uroplatus,0.349609375
+118,ecplectis,False,1078400.9958496094,2295.032958984375,True,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.398828125
+119,,False,1084025.1547851562,2295.032958984375,False,9,Genus,"Taveta weaver, Black-billed weaver",Malimbus,0.3125
+120,black-billed weaver,False,1090074.96875,1276.8662109375,True,21,Species,./species/21.png,Black-billed weaver,0.3871093750000001
+121,scribbled rabbitfish,False,1097202.5988769531,1635.353759765625,True,27,Species,./species/27.png,Scribbled rabbitfish,0.3109375
+122,signidae,False,1105039.1176757812,1600.760009765625,True,5,Family,Siganus,Siganidae,0.250390625
+123,bicolored foxface,False,1114123.3127441406,1722.111083984375,True,26,Species,./species/26.png,Bicolored foxface,0.237890625
+124,uroplates,False,1120888.0187988281,4659.437744140625,True,6,Genus,"Common flat-tail gecko, Satanic leaf-tailed gecko",Uroplatus,0.39921874999999996
+125,sebastapides,False,1130432.6218261719,2437.7890625,True,11,Genus,"Yellow spotted scorpionfish, Barchin scorpionfish",Sebastapistes,0.250390625
+126,,False,1136456.1359863281,2437.7890625,False,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.25078124999999996
+127,ecplectis,False,1141666.9338378906,3816.142822265625,True,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.44843749999999993
+128,luna lionfish,False,1151057.5485839844,1176.421142578125,True,23,Species,./species/23.png,Luna lionfish,0.314453125
+129,uroplatis,False,1156127.3701171875,3135.786865234375,True,6,Genus,"Common flat-tail gecko, Satanic leaf-tailed gecko",Uroplatus,0.42460937499999996
+130,gekkonidae,True,1164128.7358398438,2691.35791015625,False,2,Family,"Uroplatus, Phelsuma",Gekkonidae,0.3
+131,ecplectis,False,1172758.9887695312,5645.140869140625,True,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.46992187499999993
+132,gekkonidae,False,1181541.1059570312,2117.52978515625,True,2,Family,"Uroplatus, Phelsuma",Gekkonidae,0.3
+133,a,False,1187553.9458007812,5245.6279296875,False,7,Genus,"Blue-tailed day gecko, Yellow-headed day gecko",Phelsuma,0.29999999999999993
+134,common flat-tailed gecko,False,1194447.1240234375,1528.0859375,True,13,Species,./species/13.png,Common flat-tailed gecko,0.2875000000000001
+135,uroplatis,False,1204376.2209472656,3558.32275390625,True,6,Genus,"Common flat-tail gecko, Satanic leaf-tailed gecko",Uroplatus,0.43671874999999993
+136,ecplectis,False,1211200.2158203125,2733.15087890625,True,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.46953124999999996
+137,pterois,False,1217253.9636230469,2601.858154296875,False,9,Genus,"Taveta weaver, Black-billed weaver",Malimbus,0.36210937499999996
+138,clearfin lionfish,False,1224223.0378417969,1842.73193359375,True,22,Species,./species/22.png,Clearfin lionfish,0.2582031250000001
