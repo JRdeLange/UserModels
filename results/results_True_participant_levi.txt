@@ -1,20 +1,14 @@
 trial,response,first,start_time,rt,correct,fact_id,question_type,question,answer,alpha
-1,"luna lionfish
-",True,0.0,4406.86376953125,False,23,Species,./species/23.png,Luna lionfish,0.3
+1,luna lionfish,True,0.0,4406.86376953125,False,23,Species,./species/23.png,Luna lionfish,0.3
 2,black-billed weaver,True,13128.250732421875,1671.406005859375,False,21,Species,./species/21.png,Black-billed weaver,0.3
-3,"luna lionsfish
-",False,20708.497802734375,1084.055908203125,True,23,Species,./species/23.png,Luna lionfish,0.3
-4,"yellow-spotted scorpionfish
-",True,26888.6728515625,1803.293212890625,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.3
-5,"black-billed weaver
-",False,39115.211669921875,1607.52099609375,True,21,Species,./species/21.png,Black-billed weaver,0.3
+3,luna lionsfish,False,20708.497802734375,1084.055908203125,True,23,Species,./species/23.png,Luna lionfish,0.3
+4,yellow-spotted scorpionfish,True,26888.6728515625,1803.293212890625,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.3
+5,black-billed weaver,False,39115.211669921875,1607.52099609375,True,21,Species,./species/21.png,Black-billed weaver,0.3
 6,clearfin lionfish,True,47774.875732421875,1665.986083984375,False,22,Species,./species/22.png,Clearfin lionfish,0.3
 7,d,False,56699.03662109375,13596.557373046875,False,24,Species,./species/24.png,Yellow-spotted scorpionfish,0.3
 8,common flat-tailed gecko,True,72635.8876953125,1678.746337890625,False,13,Species,./species/13.png,Common flat-tailed gecko,0.3
-9,"flat-finned lionfish
-",False,83090.81372070312,8093.322998046875,False,22,Species,./species/22.png,Clearfin lionfish,0.3
-10,"red bishop weaver
-",True,103430.89477539062,3126.02587890625,False,18,Species,./species/18.png,Red Bishop Weaver,0.3
+9,flat-finned lionfish,False,83090.81372070312,8093.322998046875,False,22,Species,./species/22.png,Clearfin lionfish,0.3
+10,red bishop weaver,True,103430.89477539062,3126.02587890625,False,18,Species,./species/18.png,Red Bishop Weaver,0.3
 11,gecko,False,121711.26977539062,2501.659912109375,False,13,Species,./species/13.png,Common flat-tailed gecko,0.3
 12,,False,127621.51098632812,2501.659912109375,False,18,Species,./species/18.png,Red Bishop Weaver,0.3
 13,scribbled rabbitfish,True,133484.09985351562,1892.86181640625,False,27,Species,./species/27.png,Scribbled rabbitfish,0.3
@@ -80,8 +74,7 @@ trial,response,first,start_time,rt,correct,fact_id,question_type,question,answer
 73,phelsuma,True,679223.3547363281,1599.973876953125,False,7,Genus,"Blue-tailed day gecko, Yellow-headed day gecko",Phelsuma,0.3
 74,clearfin lionfish,False,690183.1979980469,1713.7216796875,True,22,Species,./species/22.png,Clearfin lionfish,0.3070312500000001
 75,phelsuma,False,697483.96484375,7172.406005859375,True,7,Genus,"Blue-tailed day gecko, Yellow-headed day gecko",Phelsuma,0.3
-76,"black-billed weaver
-",False,708065.3776855469,8665.19921875,True,21,Species,./species/21.png,Black-billed weaver,0.42460937499999996
+76,black-billed weaver,False,708065.3776855469,8665.19921875,True,21,Species,./species/21.png,Black-billed weaver,0.42460937499999996
 77,black-tailed widowbird,False,723507.6105957031,4150.0712890625,False,19,Species,./species/19.png,Long-tailed widowbird,0.39921874999999996
 78,pterois,False,733753.5727539062,1624.965087890625,True,10,Genus,"Clearfin lionfish, Luna lionfish",Pterois,0.250390625
 79,red bishop weaver,False,737518.9438476562,3413.84619140625,True,18,Species,./species/18.png,Red Bishop Weaver,0.3878906249999998
@@ -102,8 +95,7 @@ trial,response,first,start_time,rt,correct,fact_id,question_type,question,answer
 94,euplectes,True,848150.5998535156,4889.68701171875,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.3
 95,red bishop weaver,False,862827.8447265625,1251.6533203125,True,18,Species,./species/18.png,Red Bishop Weaver,0.33828124999999987
 96,lectae,False,870741.0737304688,12644.2880859375,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.3
-97,"bicolored foxface
-",False,886636.224609375,3236.546142578125,True,26,Species,./species/26.png,Bicolored foxface,0.2875
+97,bicolored foxface,False,886636.224609375,3236.546142578125,True,26,Species,./species/26.png,Bicolored foxface,0.2875
 98,siganus,True,895013.4128417969,4945.48095703125,False,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.3
 99,malimbus,False,902348.6877441406,2969.669921875,True,9,Genus,"Taveta weaver, Black-billed weaver",Malimbus,0.30585937500000004
 100,siganus,False,908376.8967285156,1422.8740234375,True,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.3

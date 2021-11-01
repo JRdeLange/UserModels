@@ -1,15 +1,11 @@
 trial,response,first,start_time,rt,correct,fact_id,question_type,question,answer,alpha
-1,"bicolored foxface
-",True,0.0,104556.61279296875,False,26,Species,./species/26.png,Bicolored foxface,0.3
+1,bicolored foxface,True,0.0,104556.61279296875,False,26,Species,./species/26.png,Bicolored foxface,0.3
 2,clearlin lionfish,True,112429.05395507812,1812.046142578125,False,22,Species,./species/22.png,Clearfin lionfish,0.3
 3,bicolored foxface,False,121989.32055664062,1921.423828125,True,26,Species,./species/26.png,Bicolored foxface,0.3
 4,phelsuma,True,131129.0078125,6264.1787109375,False,7,Genus,"Blue-tailed day gecko, Yellow-headed day gecko",Phelsuma,0.3
-5,"lionfish
-",False,143804.17260742188,11711.083251953125,False,22,Species,./species/22.png,Clearfin lionfish,0.3
-6,"siganus
-",True,161010.35473632812,12044.064208984375,False,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.3
-7,"phaderu
-",False,178646.8740234375,3764.8203125,False,7,Genus,"Blue-tailed day gecko, Yellow-headed day gecko",Phelsuma,0.3
+5,lionfish,False,143804.17260742188,11711.083251953125,False,22,Species,./species/22.png,Clearfin lionfish,0.3
+6,siganus,True,161010.35473632812,12044.064208984375,False,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.3
+7,phaderu,False,178646.8740234375,3764.8203125,False,7,Genus,"Blue-tailed day gecko, Yellow-headed day gecko",Phelsuma,0.3
 8,,False,188550.81103515625,3764.8203125,False,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.3
 9,red bishop weaver,True,195283.65405273438,1983.942138671875,False,18,Species,./species/18.png,Red Bishop Weaver,0.3
 10,euplectes,True,203582.390625,5964.35546875,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.3
@@ -25,8 +21,7 @@ trial,response,first,start_time,rt,correct,fact_id,question_type,question,answer
 20,uroplatus,False,343597.794921875,3780.38671875,False,7,Genus,"Blue-tailed day gecko, Yellow-headed day gecko",Phelsuma,0.349609375
 21,,False,351627.19091796875,3780.38671875,False,1,Phylum,"Gekkonidae, Ploceidae, Scorpaenidae, Siganidae",Chordata,0.3
 22,phedura,False,366247.4641113281,10888.095703125,False,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.349609375
-23,"red headed weaver
-",False,382770.3454589844,9091.6708984375,False,18,Species,./species/18.png,Red Bishop Weaver,0.349609375
+23,red headed weaver,False,382770.3454589844,9091.6708984375,False,18,Species,./species/18.png,Red Bishop Weaver,0.349609375
 24,,False,400275.4006347656,9091.6708984375,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.349609375
 25,yellow headed day gecko,False,407383.1481933594,2546.24560546875,True,15,Species,./species/15.png,Yellow-headed day gecko,0.275390625
 26,black billed weaver,True,416216.8845214844,2218.273193359375,False,21,Species,./species/21.png,Black-billed weaver,0.3
@@ -48,8 +43,7 @@ trial,response,first,start_time,rt,correct,fact_id,question_type,question,answer
 42,yellow tailed weaver,False,608385.5805664062,3249.277587890625,False,20,Species,./species/20.png,Taveta weaver,0.3
 43,seganus,False,620000.4309082031,4124.01171875,True,12,Genus,"Bicolored foxface, scribbled rabbitfish, Magnificent rabbitfish",Siganus,0.44453124999999993
 44,molidae,False,628529.6267089844,10497.547119140625,False,8,Genus,"Red Bishop Weaver, Long-tailed widowbird",Euplectes,0.396484375
-45,"black billed weaver
-",False,643037.1611328125,1624.699462890625,True,21,Species,./species/21.png,Black-billed weaver,0.250390625
+45,black billed weaver,False,643037.1611328125,1624.699462890625,True,21,Species,./species/21.png,Black-billed weaver,0.250390625
 46,gekkonidae,False,650706.3649902344,4608.367431640625,True,2,Family,"Uroplatus, Phelsuma",Gekkonidae,0.349609375
 47,,False,659812.796875,4608.367431640625,False,1,Phylum,"Gekkonidae, Ploceidae, Scorpaenidae, Siganidae",Chordata,0.39921874999999996
 48,,False,672794.1176757812,4608.367431640625,False,26,Species,./species/26.png,Bicolored foxface,0.35
