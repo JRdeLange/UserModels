@@ -7,10 +7,10 @@ def open_results(folder):
     writer = csv.writer(csv_file)
     participant_id = 0
     for filename in os.listdir(folder):
-        if filename == "results.csv":
+        if filename.endswith("csv"):
             continue
         print(filename)
-        #participant_id += 1
+        participant_id += 1
         name = filename.split("_")[-1][:-4]
         condition = filename.split("_")[1] == "True"
         questions = -1
@@ -18,7 +18,7 @@ def open_results(folder):
         learned_species = set()
         learned_non_species = set()
         f = open(folder + "/" + filename)
-        for line in f.readlines()[1:]:
+        for line in f.readlines()[2:]:
             split_line = line.split(",")
             trial, response, first, rt, correct, fact_id, q_type = (
                 split_line[0],
