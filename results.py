@@ -1,9 +1,16 @@
-import sys
+import csv
 import os
 
 
 def open_results(folder):
+    csv_file = open(folder + "/" + "results.csv", 'w+', newline='', encoding='UTF8')
+    writer = csv.writer(csv_file)
+    participant_id = 0
     for filename in os.listdir(folder):
+        if filename == "results.csv":
+            continue
+        print(filename)
+        #participant_id += 1
         name = filename.split("_")[-1][:-4]
         condition = filename.split("_")[1] == "True"
         questions = -1
@@ -34,6 +41,10 @@ def open_results(folder):
                         learned_species.add(fact_id)
                     else:
                         learned_non_species.add(fact_id)
+
+            # write to csv file
+            csv_line = [participant_id, name, condition, fact_id, rt, "Species" if int(fact_id) < 13 else "Non-Species"]
+            writer.writerow(csv_line)
         print(
             f"{name}, Condition: {condition}, Questions: {questions}, Unique Questions: {len(facts_encountered)}"
             f", Learned Species: {len(learned_species)}, Learned Non-species: {len(learned_non_species)}"
