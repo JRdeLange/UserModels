@@ -1,4 +1,4 @@
-name,hierarchy,repsonse,question
+name,hierarchy,fact,RT,question
 alissa,False,5,13997.16015625,Species
 alissa,False,22,4284.3193359375,Non-Species
 alissa,False,5,2849.6220703125,Species
