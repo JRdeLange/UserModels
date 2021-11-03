@@ -1,0 +1,34 @@
+name = c('Chiel', "Nico", "Alissa", 'Patrick', 'Cosmin', 'Joshua', 'Loran', 'Levi')
+correct = c(11, 12, 10, 6, 10, 16, 26, 17)
+condition = c('Random', 'Random', 'Random', 'Random', 'Ordered', 'Ordered', 'Ordered', 'Ordered')
+
+dat = data.frame(name, correct, condition)
+summary(dat)
+aggregate(dat$correct, by=list(dat$condition), mean)
+Rdat = subset(dat, dat$condition == "Random")
+Odat = subset(dat, dat$condition == "Ordered")
+
+t.test(Rdat$correct, Odat$correct)
+
+
+resdat<- read.csv(file="results.csv", header=TRUE, sep=",")
+Rallresdat = subset(resdat, resdat$hierarchy == "False")
+Oallresdat = subset(resdat, resdat$hierarchy == "True")
+
+t.test(Rresdat$RT, Oresdat$RT)
+
+
+Rspeciesresdat = subset(resdat, resdat$hierarchy == "False" & resdat$question == "Species")
+Ospeciesresdat = subset(resdat, resdat$hierarchy == "True" & resdat$question == "Species")
+
+t.test(Rspeciesresdat$RT, Ospeciesresdat$RT)
+
+
+Rtextresdat = subset(resdat, resdat$hierarchy == "False" & resdat$question == "Non-Species")
+Otextresdat = subset(resdat, resdat$hierarchy == "True" & resdat$question == "Non-Species")
+
+t.test(Rtextresdat$RT, Otextresdat$RT)
+
+dat$percentOfTotal = c(11/18, 12/12, 10/20, 6/13, 10/17, 16/22, 26/27, 17/24)
+aggregate(dat$percentOfTotal, by=list(dat$condition), mean)
+t.test(Rdat$percentOfTotal, Odat$percentOfTotal)
