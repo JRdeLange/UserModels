@@ -5,9 +5,10 @@ import os
 def open_results(folder):
     csv_file = open(folder + "/" + "results.csv", 'w+', newline='', encoding='UTF8')
     writer = csv.writer(csv_file)
+    writer.writerow(["Subject", "Name", "Correct", "Fact-id", "RT", "Question_type"])
     participant_id = 0
     for filename in os.listdir(folder):
-        if filename.endswith("csv"):
+        if "csv" in filename:
             continue
         print(filename)
         participant_id += 1
@@ -43,7 +44,7 @@ def open_results(folder):
                         learned_non_species.add(fact_id)
 
             # write to csv file
-            csv_line = [participant_id, name, condition, fact_id, rt, "Species" if int(fact_id) < 13 else "Non-Species"]
+            csv_line = [participant_id, name, condition, split_line[5], fact_id, rt, "Species" if int(fact_id) < 13 else "Non-Species"]
             writer.writerow(csv_line)
         print(
             f"{name}, Condition: {condition}, Questions: {questions}, Unique Questions: {len(facts_encountered)}"
