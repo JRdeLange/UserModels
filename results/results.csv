@@ -1,4 +1,4 @@
-Subject,Name,Correct,Fact-id,RT,Question_type
+Subject,Name,Hierarchy,Correct,Fact-id,RT,Question_type
 1,alissa,False,False,22,4284.3193359375,Non-Species
 1,alissa,False,True,5,2849.6220703125,Species
 1,alissa,False,True,22,1018.743896484375,Non-Species
